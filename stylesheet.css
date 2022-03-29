@@ -164,17 +164,13 @@ body {
 
 #info {
    position: absolute;
-   margin-right: 250px;
-   margin-left: 250px;
-   margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 250px;
     min-width: 300px;
-    background-color: lightgray;
 }
 
 .offerColumn {
     display: flex;
-    background-color: lightgray;
+    background-color: whitesmoke;
     flex-grow: 1;
     flex-direction: column;
 }
@@ -183,26 +179,41 @@ body {
    display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-top: 400px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 450px;
     justify-content: center;
-   background-color: red;
+    padding: 10px;
+   /* background-color: red; */
 }
 
 .offerPics {
+    display: flex;
+    flex-direction: column;
     min-height: 100px;
     min-width: 100px;
     max-height: 200px;
     max-width: 200px;
-
+    transition: transform .3s;
 }
 
+/*.offerPics:hover {
+    transform: scale(1.2);
+    border: 0.5px solid lightgray;
+}*/
+
 .articles {
-    padding: 5px;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    justify-content: space-between;
+    margin: 20px;
+    transition: transform .3s;
+}
+
+.articles:hover {
+    transform: scale(1.1);
+    border: solid 1px red;
+    box-shadow: 0 0 10px indianred;
 }
 
 .article_image {
@@ -212,13 +223,22 @@ body {
 }
 
 .article_text {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 200px;
+    max-width: 200px;
+    margin: 0px 10px 10px 10px;
     z-index: 1;
     position: relative;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
     padding: 10px;
-    background-color: darkgrey;
+    background-color: whitesmoke;
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+    border-bottom-color: red;
+    border-top-color: red;
 }
 
 div {
