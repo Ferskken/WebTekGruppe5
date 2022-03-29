@@ -158,8 +158,9 @@ body {
     position: center;
     margin-right: 330px;
     margin-left: 250px;
-    margin-top: 10px;
+    margin-top: 20px;
     min-width: 300px;
+    max-width: 540px;
 }
 
 #info {
@@ -173,6 +174,7 @@ body {
     background-color: whitesmoke;
     flex-grow: 1;
     flex-direction: column;
+    padding-bottom: 150px;
 }
 
 .offerRow {
@@ -184,6 +186,9 @@ body {
     margin-top: 450px;
     justify-content: center;
     padding: 10px;
+    height: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
    /* background-color: red; */
 }
 
@@ -212,7 +217,7 @@ body {
 
 .articles:hover {
     transform: scale(1.1);
-    border: solid 1px red;
+    /*border: solid 1px red;*/
     box-shadow: 0 0 10px indianred;
 }
 
@@ -229,18 +234,22 @@ body {
     min-width: 100px;
     max-height: 200px;
     max-width: 200px;
-    margin: 0px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
     z-index: 1;
     position: relative;
     flex-grow: 1;
     padding: 10px;
+    padding-bottom: 50px;
     background-color: whitesmoke;
-    border-bottom: solid 1px;
     border-top: solid 1px;
-    border-bottom-color: red;
     border-top-color: red;
 }
 
 div {
     display: block;
+}
+
+h3 {
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
 }
