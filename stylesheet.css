@@ -238,8 +238,7 @@ body {
     z-index: 1;
     position: relative;
     flex-grow: 1;
-    padding: 10px;
-    padding-bottom: 50px;
+    padding: 10px 10px 50px;
     background-color: whitesmoke;
     border-top: solid 1px;
     border-top-color: red;
