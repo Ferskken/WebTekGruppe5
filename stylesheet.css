@@ -353,3 +353,87 @@ input{
 #chk:checked ~ .signup label{
     transform: scale(.6);
 }
+
+/** Commentsection */
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 20px;
+    margin-top: 100px;
+    width: 450px;
+    word-wrap: break-word;
+    background-color: whitesmoke;
+    background-clip: border-box;
+    border-radius: 6px;
+}
+.comment-box {
+    padding: 5px
+}
+
+.rating {
+    display: flex;
+    margin-top: -10px;
+    flex-direction: row-reverse;
+    margin-left: -4px;
+    float: left
+}
+.rating>input {
+    display: none
+}
+.rating>stars {
+
+    position: relative;
+    width: 10px;
+    font-size: 15px;
+    color: gold;
+    cursor: pointer
+}
+
+
+.rating>stars::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+.rating>stars:hover:before,
+.rating>stars:hover~label:before {
+    opacity: 1 !important
+}
+.rating>input:checked~stars:before {
+    opacity: 1
+}
+.rating:hover>input:checked~stars:before {
+    opacity: 0.4
+}
+
+.stars {
+    color: gold;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.cancelbtn {
+    width: 70px;
+    background-color: red;
+}
+
+.cancelbtn:hover {
+    background-color: darkred;
+}
+
+.sendbtn {
+    width: 70px;
+    background-color: green;
+}
+.sendbtn:hover {
+    background-color: darkgreen;
+}
+
