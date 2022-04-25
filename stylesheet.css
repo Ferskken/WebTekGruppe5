@@ -369,8 +369,13 @@ input{
     background-clip: border-box;
     border-radius: 6px;
 }
+
 .comment-box {
-    padding: 5px
+    padding: 5px;
+}
+
+.form-control {
+    position: relative;
 }
 
 .rating {
@@ -411,10 +416,10 @@ input{
 
 .stars {
     color: gold;
-    font-size: 2.3em;
+    font-size: 1.3em;
     justify-content: center;
     display: flex;
-    margin: 5px;
+    margin: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: .5s ease-in-out;
@@ -422,18 +427,16 @@ input{
 
 .cancelbtn {
     width: 70px;
-    background-color: red;
 }
 
 .cancelbtn:hover {
-    background-color: darkred;
+    background-color: red;
 }
 
 .sendbtn {
     width: 70px;
-    background-color: green;
 }
 .sendbtn:hover {
-    background-color: darkgreen;
+    background-color: green;
 }
 
