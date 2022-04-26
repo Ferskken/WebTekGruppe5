@@ -1,8 +1,9 @@
-import './App.css';
+
 import LandingPage from "./pages/landingPage";
+import Navbar from "./components/Navbar";
 
-function App() {
-  return <LandingPage />;
+export default function App() {
+  return (
+      <Navbar />
+  )
 }
-
-export default App;

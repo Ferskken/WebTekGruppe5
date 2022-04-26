@@ -1,7 +1,7 @@
 import React from 'react';
 import "../style/stylesheet.css";
 
-class LandingPage extends React.Component {
+export default class LandingPage extends React.Component {
     render() {
         return (
       <div>
@@ -168,4 +168,4 @@ class LandingPage extends React.Component {
       }
 }
 
-export default LandingPage;
+
