@@ -1,5 +1,5 @@
 import React from 'react';
-import 'src/style/stylesheet.css';
+import "../style/stylesheet.css";
 
 class LandingPage extends React.Component {
     render() {
