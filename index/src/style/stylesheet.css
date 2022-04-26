@@ -178,8 +178,8 @@ body {
    display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    margin-left: 150px;
-    margin-right: 150px;
+   /* margin-left: 150px;
+    margin-right: 150px; */
     margin-top: 20px;
     justify-content: center;
     padding: 10px;
@@ -209,6 +209,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     margin: 20px;
+    padding: 20px;
     transition: transform .3s;
 }
 
@@ -363,8 +364,8 @@ input{
     min-width: 0;
     padding: 20px;
     margin-top: 100px;
-    width: 450px;
-    word-wrap: break-word;
+    width: 70%;
+    align-content: center;
     background-color: whitesmoke;
     background-clip: border-box;
     border-radius: 6px;
@@ -376,6 +377,7 @@ input{
 
 .form-control {
     position: relative;
+    width: 80%;
 }
 
 .rating {
@@ -385,6 +387,10 @@ input{
     margin-left: -4px;
     float: left
 }
+
+/*
+
+
 .rating>input {
     display: none
 }
@@ -414,16 +420,20 @@ input{
     opacity: 0.4
 }
 
+
+ */
+
 .stars {
     color: gold;
     font-size: 1.3em;
     justify-content: center;
     display: flex;
-    margin: 15px;
+    margin: 25px 25px 25px 0px;
     font-weight: bold;
     cursor: pointer;
     transition: .5s ease-in-out;
 }
+
 
 .cancelbtn {
     width: 70px;
