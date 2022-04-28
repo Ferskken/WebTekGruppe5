@@ -5,6 +5,7 @@ import './style/stylesheet.css';
 import App from './App';
 import LandingPage from "./pages/landingPage";
 import ProductCard from "./components/ProductCard";
+import Yourpage from "./pages/yourpage";
 
 ReactDOM.render(<LandingPage/>, document.getElementById("root"));
 

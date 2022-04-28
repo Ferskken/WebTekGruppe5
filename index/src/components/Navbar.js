@@ -19,7 +19,7 @@ export default function Navbar() {
                         <li><a href={"products.html"}>Produkter</a></li>
                         <li><a href={"contacts.html"}>Kontakter</a></li>
                         <li><a href={"destinations.html"}>Destinasjoner</a></li>
-                        <li><a href={"yourpage.html"}>Din side</a></li>
+                        <li><a href={"yourpage.js"}>Din side</a></li>
                     </ul>
                 </div>
             </div>
