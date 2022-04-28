@@ -3,9 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/stylesheet.css';
 import App from './App';
-
-
 import LandingPage from "./pages/landingPage";
+import ProductCard from "./components/ProductCard";
 
 ReactDOM.render(<LandingPage/>, document.getElementById("root"));
 
