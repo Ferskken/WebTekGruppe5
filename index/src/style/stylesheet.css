@@ -17,7 +17,11 @@ body {
 }
 
 .navbar {
+    position: fixed;
+    top: 0px;
     width: 100%;
+    z-index: 100;
+    background-color: white;
     box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
 }
 
@@ -156,7 +160,7 @@ body {
     position: center;
     margin-right: 330px;
     margin-left: 250px;
-    margin-top: 20px;
+    margin-top: 150px;
     min-width: 300px;
     max-width: 540px;
 }
@@ -178,8 +182,8 @@ body {
    display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-   /* margin-left: 150px;
-    margin-right: 150px; */
+    margin-left: 150px;
+    margin-right: 150px;
     margin-top: 20px;
     justify-content: center;
     padding: 10px;

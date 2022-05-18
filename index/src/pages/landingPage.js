@@ -48,7 +48,7 @@ export default class LandingPage extends React.Component {
                                title="Flyktningsvenn!"
                                text="Snakk med noen som har annen kulturell bakgrunn"
                   />
-                  <ProductCard img={require("../pictures/RKungdom.jpg")}
+                  <ProductCard img={require("../pictures/rkungdom.jpg")}
                                alt="Glad ungdom i røde kors"
                                title="Rødekors ungdom!"
                                text="Bli medlem i røde kors ungdom"
