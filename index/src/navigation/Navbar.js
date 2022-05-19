@@ -1,4 +1,8 @@
 import React from "react";
+import YourPage from "../pages/YourPage"
+import {Route, Routes} from "react-router-dom";
+import LandingPage from "../pages/LandingPage";
+import {ActiveLink} from "./ActiveLink";
 
 export default function Navbar() {
     return (
@@ -12,17 +16,25 @@ export default function Navbar() {
                         <span className="line line3"/>
                     </div>
                     <div className="logo">
-                        <h1><img src={require("../pictures/rk.jpg")}  alt={"rodeKors"}/></h1>
+                        <h1><img src={require("../pictures/rk.jpg")} alt={"rodeKors"}/></h1>
                     </div>
-                    <ul className="menu-items" id={"menuList"}>
+{/*                    <ul className="menu-items" id={"menuList"}>
                         <li><a href={"aboutus.html"}>Om oss</a></li>
                         <li><a href={"products.html"}>Produkter</a></li>
                         <li><a href={"contacts.html"}>Kontakter</a></li>
                         <li><a href={"destinations.html"}>Destinasjoner</a></li>
                         <li><a href={"yourpage.js"}>Din side</a></li>
+                    </ul>*/}
+                     <ul className="menu-items" id={"menuList"}>
+                        <li><ActiveLink to="/">Hjem</ActiveLink></li>
+                        <li><ActiveLink to="/omoss">Om oss</ActiveLink></li>
+                        <li><ActiveLink to="/produkter">Produkter</ActiveLink></li>
+                        <li><ActiveLink to="/handlekurv">Handlekurv</ActiveLink></li>
+                        <li><ActiveLink to="/dinside">Din side</ActiveLink></li>
                     </ul>
-                </div>
+             </div>
             </div>
         </nav>
+
     )
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import LoginOrSignup from "../components/LoginOrSignup";
+import Navbar from "../navigation/Navbar";
+import LoginOrSignup from "../login/LoginOrSignup";
 
-export default class yourpage extends React.Component {
+export default class yourPage extends React.Component {
     render() {
         return(
             <>

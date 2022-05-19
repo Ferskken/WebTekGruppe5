@@ -1,9 +1,14 @@
 
-import LandingPage from "./pages/landingPage";
-import Navbar from "./components/Navbar";
+import Navbar from "./navigation/Navbar";
+import {MainSection} from "./MainSection";
+import {BrowserRouter as Router} from "react-router-dom";
 
 export default function App() {
   return (
-      <Navbar />
+      <Router>
+        <Navbar/>
+        <MainSection/>
+      </Router>
+
   )
 }

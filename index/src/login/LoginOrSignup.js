@@ -10,9 +10,9 @@ export default function LoginOrSignup() {
                         <form>
                             <label htmlFor="chk" aria-hidden="true">Sign up</label>
                             <input type="text" name="txt" placeholder="User name" required=""/>
-                                <input type="email" name="email" placeholder="Email" required=""/>
-                                    <input type="password" name="pswd" placeholder="Password" required=""/>
-                                        <button className="su-log-btn">Sign up</button>
+                            <input type="email" name="email" placeholder="Email" required=""/>
+                            <input type="password" name="pswd" placeholder="Password" required=""/>
+                            <button className="su-log-btn">Sign up</button>
 
                         </form>
                     </div>
@@ -21,8 +21,8 @@ export default function LoginOrSignup() {
                         <form>
                             <label htmlFor="chk" aria-hidden="true">Login</label>
                             <input type="text" name="txt" placeholder="User name" required=""/>
-                                <input type="password" name="pswd" placeholder="Password" required=""/>
-                                    <button className="su-log-btn">Login</button>
+                            <input type="password" name="pswd" placeholder="Password" required=""/>
+                            <button className="su-log-btn">Login</button> 
                         </form>
                     </div>
             </div>

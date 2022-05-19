@@ -3,11 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/stylesheet.css';
 import App from './App';
-import LandingPage from "./pages/landingPage";
-import ProductCard from "./components/ProductCard";
-import Yourpage from "./pages/yourpage";
 
-ReactDOM.render(<LandingPage/>, document.getElementById("root"));
+ReactDOM.render(<App/>, document.getElementById("root"));
 
 
 // If you want to start measuring performance in your app, pass a function
