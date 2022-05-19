@@ -1,8 +1,8 @@
 import React from 'react';
 import "../style/stylesheet.css";
-import Navbar from "../components/Navbar";
-import Review from "../components/Review";
-import ProductCard from "../components/ProductCard";
+import Navbar from "../navigation/Navbar";
+import Review from "../review/Review";
+import ProductCard from "../products/ProductCard";
 
 export default class LandingPage extends React.Component {
     render() {
@@ -48,7 +48,7 @@ export default class LandingPage extends React.Component {
                                title="Flyktningsvenn!"
                                text="Snakk med noen som har annen kulturell bakgrunn"
                   />
-                  <ProductCard img={require("../pictures/rkungdom.jpg")}
+                  <ProductCard img={require("../pictures/RKungdom.jpg")}
                                alt="Glad ungdom i røde kors"
                                title="Rødekors ungdom!"
                                text="Bli medlem i røde kors ungdom"
