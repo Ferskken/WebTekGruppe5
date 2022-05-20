@@ -12,11 +12,11 @@ export default function ProductCard(props) {
                     <div className="article_intro">
                         <h1>{props.title}</h1>
                         <br/>
-                        <p>{props.description}</p>
+                        <p>{props.text}</p>
                         <br/>
                         <p>{"Vennligst kryss av under:"}</p>
 
-                           <select className="productCardDrop" name="TimeStampDrop">
+                            <select className="productCardDrop" name="TimeStampDrop">
                               <option value="hide">{"Tid på dagen"}</option>
                               <option value="morning">{"10:00 - 14:00"}</option>
                               <option value="evening">{"17:00 - 21:00"}</option>
