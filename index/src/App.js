@@ -4,6 +4,8 @@ import Navbar from "./navigation/Navbar";
 import {MainSection} from "./MainSection";
 import {BrowserRouter as Router} from "react-router-dom";
 import {FAKE_PRODUCTS} from "./FakeData";
+import {ProductContext} from "./context/ProductContext"
+
 
 export default function App() {
   const[products, setProducts] = useState([])
@@ -12,17 +14,22 @@ export default function App() {
       setProducts(FAKE_PRODUCTS)
    }
 
+   useEffect(() => {
+       loadProducts();
+   },[])
+
    function loadProducts() {
-      products.length === 0
-          ? setFakeProducts()
-          : console.log("loadProducts() called, but we don't fetch the data again")
+           setFakeProducts()
+
    }
 
   return (
-      <Router>
-        <Navbar/>
-        <MainSection/>
-      </Router>
+      <ProductContext.Provider value={products}>
+          <Router>
+              <Navbar/>
+              <MainSection/>
+          </Router>
+      </ProductContext.Provider>
 
   )
 }

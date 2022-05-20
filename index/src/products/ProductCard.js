@@ -1,12 +1,12 @@
 import React from "react";
 
 export default function ProductCard(props) {
-
+    
     return (
         <article className="articles">
             <div className="offerColumn">
                 <div className="article_image">
-                    <img className="offerPics" src={props.img} alt={props.alt}/>
+                    <img className="offerPics" src={require("../pictures/" + props.id + ".jpg")} alt={props.alt}/>
                 </div>
                 <div className="article_text">
                     <div className="article_intro">
@@ -50,7 +50,7 @@ export default function ProductCard(props) {
                         </form>
 
                         <p>{props.duration}</p>
-                        <h3>{props.price}</h3>
+                        <h3>{props.price} kr</h3>
                         <br/>
                     </div>
 
