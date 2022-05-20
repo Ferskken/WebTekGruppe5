@@ -238,12 +238,23 @@ body {
     flex-direction: column;
     z-index: 1;
     flex-grow: 1;
-    padding: 10px 10px 50px;
-    margin: 20px;
+    padding: 10px 10px 10px;
+    margin: 10px;
 }
 
 .productCardDrop {
     width: 50%;
+}
+
+.articleBtn {
+    width: 100px;
+    height: 30px;
+}
+
+.articleBtn:hover {
+    box-shadow: 0 0 5px indianred;
+    transform: scale(1.1);
+
 }
 
 div {

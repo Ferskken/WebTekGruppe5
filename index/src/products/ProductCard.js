@@ -48,12 +48,12 @@ export default function ProductCard(props) {
                            <br />
                            <br />
 
-                        <h3>{props.duration}</h3>
+                        <p>{props.duration}</p>
                         <h3>{props.price}</h3>
                         <br/>
                     </div>
 
-                    <button className="articleBtn" id="buyBtn"><img src={"../pictures/shopping-cart.png"} alt="shoppingcartimg" /> </button>
+                <button className="articleBtn" id="buyBtn"> Legg til kurs </button>
 
                 </div>
             </div>
