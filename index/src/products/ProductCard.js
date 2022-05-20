@@ -15,38 +15,39 @@ export default function ProductCard(props) {
                         <p>{props.text}</p>
                         <br/>
                         <p>{"Vennligst kryss av under:"}</p>
-
+                        <form>
                             <select className="productCardDrop" name="TimeStampDrop">
-                              <option value="hide">{"Tid på dagen"}</option>
-                              <option value="morning">{"10:00 - 14:00"}</option>
-                              <option value="evening">{"17:00 - 21:00"}</option>
-                           </select>
-                           <br />
-                           <br />
+                                <option value="hide">{"Tid på dagen"}</option>
+                                <option value="morning">{"10:00 - 14:00"}</option>
+                                <option value="evening">{"17:00 - 21:00"}</option>
+                            </select>
+                            <br />
+                            <br />
 
-                           <select className="productCardDrop" name="languageDrop">
-                              <option value="hide">{"Språk"}</option>
-                              <option value="norwegian">{"Norsk"}</option>
-                              <option value="english">{"English"}</option>
-                           </select>
-                           <br />
-                           <br />
+                            <select className="productCardDrop" name="languageDrop">
+                                <option value="hide">{"Språk"}</option>
+                                <option value="norwegian">{"Norsk"}</option>
+                                <option value="english">{"English"}</option>
+                            </select>
+                            <br />
+                            <br />
 
-                           <select className="productCardDrop" name="ParticipantDrop">
-                              <option value="hide">{"Antall deltagere"}</option>
-                              <option value="1">{"1 (Alene)"}</option>
-                              <option value="5">{"5 (Gruppe)"}</option>
-                           </select>
-                           <br />
-                           <br />
+                            <select className="productCardDrop" name="ParticipantDrop">
+                                <option value="hide">{"Antall deltagere"}</option>
+                                <option value="1">{"1 (Alene)"}</option>
+                                <option value="5">{"5 (Gruppe)"}</option>
+                            </select>
+                            <br />
+                            <br />
 
                             <select className="productCardDrop" name="dateDrop">
-                              <option value="hide">{"Velg dato"}</option>
-                              <option value="dato1">{"1.januar"}</option>
-                              <option value="dato2">{"2.januar"}</option>
-                           </select>
-                           <br />
-                           <br />
+                                <option value="hide">{"Velg dato"}</option>
+                                <option value="dato1">{"1.januar"}</option>
+                                <option value="dato2">{"2.januar"}</option>
+                            </select>
+                            <br />
+                            <br />
+                        </form>
 
                         <p>{props.duration}</p>
                         <h3>{props.price}</h3>
