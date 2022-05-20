@@ -34,7 +34,7 @@ export default function LoginOrSignup() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        console.log("submitted")
+        console.log(``)
     }
 
     return(

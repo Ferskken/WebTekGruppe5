@@ -12,7 +12,7 @@ export default function ProductCard(props) {
                     <div className="article_intro">
                         <h1>{props.title}</h1>
                         <br/>
-                        <p>{props.text}</p>
+                        <p>{props.description}</p>
                         <br/>
                         <p>{"Vennligst kryss av under:"}</p>
 
