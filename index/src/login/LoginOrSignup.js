@@ -39,6 +39,11 @@ export default function LoginOrSignup() {
 
     return(
         <div className="offerRow">
+
+                            <div className="heartbeatBox">
+                            <img src={require("../pictures/heartbeat.png")} className="heartbeatPic"  alt={"heartbeatHeader"}/>
+                            </div>
+
             <div className="main-form">
                 <input type="checkbox" id="chk" aria-hidden="true"/>
 

@@ -3,6 +3,7 @@ import "../style/stylesheet.css";
 import Navbar from "../navigation/Navbar";
 import Review from "../reviews/Review";
 import ProductCard from "../products/ProductCard";
+import CoreValues from "../coreValues/coreValues";
 
 export default class LandingPage extends React.Component {
     render() {
@@ -34,6 +35,11 @@ export default class LandingPage extends React.Component {
                       translation by H. Rackham.
 
                   </p>
+
+                  <div className="heartbeatBox">
+                      <img src={require("../pictures/heartbeat.png")} className="heartbeatPic"  alt={"heartbeatHeader"}/>
+                  </div>
+
                       <div className="destBox">
                           {/* eslint-disable-next-line jsx-a11y/iframe-has-title */}
                           <iframe id="map"
@@ -43,7 +49,7 @@ export default class LandingPage extends React.Component {
                           />
 
                       <div className="destBox2">
-                          <h3>Her finner du oss:</h3>
+                          <h3>Litt informasjon om oss:</h3>
                           <br/>
 
                           <h4>Adresse:</h4>
@@ -52,22 +58,24 @@ export default class LandingPage extends React.Component {
                           <br/>
 
                           <h4>E-post:</h4>
-                          <p>aalesund@rodekors.org</p>
+                          <p>************@rodekors.org</p>
                           <hr className="destLines"/>
                           <br/>
 
                           <h4>Leder:</h4>
-                          <p>Stian Henriksen</p>
+                          <p>**** ********</p>
                           <hr className="destLines"/>
                           <br/>
 
                           <h4>Nestleder:</h4>
-                          <p>Nina Renate Vatnehol</p>
+                          <p>******* *****</p>
                           <hr className="destLines"/>
                           <br/>
 
                       </div>
               </div>
+
+                 <CoreValues />
 
           </div>
 
