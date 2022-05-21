@@ -12,22 +12,34 @@ export default function App() {
   const[products, setProducts] = useState([])
     const[cartItems, setCartItems] = useState([])
 
+    useEffect(() => {
+        loadProducts();
+    },[])
+
    function setFakeProducts() {
       setProducts(FAKE_PRODUCTS)
    }
 
-   useEffect(() => {
-       loadProducts();
-   },[])
 
    function loadProducts() {
            setFakeProducts()
 
    }
 
+   function addProductToCart(product) {
+        setCartItems(function(prevCartItems) {
+            prevCartItems.push(product)
+        })
+   }
+
+   function deleteProduct() {
+
+   }
+
   return (
-      <ProductContext.Provider value={products}>
-          <CartContext.Provider value={cartItems}>
+      <ProductContext.Provider value={{products: products}}>
+          <CartContext.Provider value={{cartItems: cartItems, handleDelete: deleteProduct,
+                                                              handleAdd: addProductToCart}}>
               <Router>
                   <Navbar/>
                   <MainSection/>

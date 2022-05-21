@@ -1,21 +1,36 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import {CartContext} from "../context/CartContext";
+import AddToCartButton from "../shoppingCart/AddToCartButton";
 
 export default function ProductCard(props) {
 
-const cartItems = useContext(CartContext)
+const cartContext = useContext(CartContext)
+const cartItems = cartContext.cartItems
+
+const [cartItemData, setCartItemData] = useState([])
+
+    function handleChange(event) {
+        console.log(event)
+        const {name, value, type, checked} = event.target
+        setCartItemData(prevFormData => {
+            return {
+                ...prevFormData,
+                [name]: type === "checkbox" ? checked : value
+            }
+        })
+    }
 
     return (
         <article className="articles">
             <div className="offerColumn">
                 <div className="article_image">
-                    <img className="offerPics" src={require("../pictures/" + props.id + ".jpg")} alt={props.alt}/>
+                    <img className="offerPics" src={require("../pictures/" + props.product.id + ".jpg")} alt={props.product.alt}/>
                 </div>
                 <div className="article_text">
                     <div className="article_intro">
-                        <h1>{props.title}</h1>
+                        <h1>{props.product.title}</h1>
                         <br/>
-                        <p>{props.text}</p>
+                        <p>{props.product.text}</p>
                         <br/>
                         <p>{"Vennligst kryss av under:"}</p>
                         <form>
@@ -52,8 +67,8 @@ const cartItems = useContext(CartContext)
                             <br />
                         </form>
 
-                        <p>{props.duration}</p>
-                        <h3>{props.price} kr</h3>
+                        <p>{props.product.duration}</p>
+                        <h3>{props.product.price} kr</h3>
                         <br/>
                     </div>
 

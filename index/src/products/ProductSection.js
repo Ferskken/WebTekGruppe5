@@ -4,21 +4,16 @@ import Review from "../reviews/Review";
 import {ProductContext} from "../context/ProductContext"
 
 export default function ProductSection() {
-    const products = useContext(ProductContext)
+    const productContext = useContext(ProductContext)
+    const products = productContext.products
 
 
     const productElements = products.map(product => (
             <ProductCard
 
-                //Could pass the entire object
-                //product={product}
+                product={product}
+                key={product.id}
 
-                id={product.id}
-                alt={product.alt}
-                title={product.title}
-                text={product.description}
-                duration={product.duration}
-                price={product.price}
             />
         )
     )
