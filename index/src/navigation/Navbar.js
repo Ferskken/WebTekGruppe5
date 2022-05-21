@@ -20,7 +20,6 @@ export default function Navbar() {
                     </div>
                      <ul className="menu-items" id={"menuList"}>
                         <li><ActiveLink to="/">Hjem</ActiveLink></li>
-                        <li><ActiveLink to="/omoss">Om oss</ActiveLink></li>
                         <li><ActiveLink to="/produkter">Produkter</ActiveLink></li>
                         <li><ActiveLink to="/handlekurv">Handlekurv</ActiveLink></li>
                         <li><ActiveLink to="/dinside">Din side</ActiveLink></li>

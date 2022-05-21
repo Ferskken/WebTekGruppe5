@@ -398,3 +398,141 @@ input{
     margin-left: 6px;
     color: #56575b;
 }
+
+/** Shopping cart */
+
+
+.cartContainer{
+    padding: 20px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 100px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px indianred;
+}
+
+.Header{
+    margin: auto;
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Heading{
+    font-size: 20px;
+    font-weight: 700;
+    color: #2F3841;
+}
+.Action{
+    font-size: 14px;
+    font-weight: 600;
+    color: #E44C4C;
+    cursor: pointer;
+    border-bottom: 1px solid #E44C4C;
+}
+
+.Cart-Items{
+    padding-top: 30px;
+    margin: 30px auto;
+    width: 90%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about{
+    height: 100%;
+}
+.title{
+    padding-top: 5px;
+    line-height: 10px;
+    font-size: 32px;
+    font-weight: 800;
+    color: #202020;
+}
+.subtitle{
+    line-height: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #909090;
+}
+
+.counter{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: #202020;
+    cursor: pointer;
+}
+.count{
+    font-size: 20px;
+    font-weight: 900;
+    color: #202020;
+}
+
+.prices{
+    align-content: center;
+    text-align: right;
+}
+.amount{
+    font-size: 26px;
+    font-weight: 800;
+    color: #202020;
+}
+
+hr{
+    width: 90%;
+    float: right;
+    margin-right: 5%;
+}
+.checkout{
+    padding-top: 50px;
+    float: right;
+    margin-right: 5%;
+    width: 28%;
+}
+.total{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.Subtotal{
+    font-size: 20px;
+    color: #202020;
+}
+.items{
+    font-size: 16px;
+    font-weight: 500;
+    color: #909090;
+    line-height: 10px;
+}
+.total-amount{
+    font-size: 20px;
+    font-weight: 900;
+    color: #202020;
+}
+.button{
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: linear-gradient(to bottom right, indianred, red);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
