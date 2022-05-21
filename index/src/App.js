@@ -10,6 +10,7 @@ import {CartContext} from "./context/CartContext";
 
 export default function App() {
   const[products, setProducts] = useState([])
+    const[cartItems, setCartItems] = useState([])
 
    function setFakeProducts() {
       setProducts(FAKE_PRODUCTS)
@@ -26,12 +27,12 @@ export default function App() {
 
   return (
       <ProductContext.Provider value={products}>
-          <CartContext>
+          <CartContext.Provider value={cartItems}>
               <Router>
                   <Navbar/>
                   <MainSection/>
               </Router>
-              </CartContext>
+              </CartContext.Provider>
       </ProductContext.Provider>
 
   )

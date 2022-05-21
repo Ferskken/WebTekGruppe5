@@ -1,6 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
+import {CartContext} from "../context/CartContext";
 
 export default function ProductCard(props) {
+
+const cartItems = useContext(CartContext)
 
     return (
         <article className="articles">
