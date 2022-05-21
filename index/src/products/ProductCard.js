@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function ProductCard(props) {
-    
+
     return (
         <article className="articles">
             <div className="offerColumn">
