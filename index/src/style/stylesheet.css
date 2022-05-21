@@ -18,7 +18,7 @@ body {
 
 .navbar {
     position: fixed;
-    top: 0px;
+    top: 0;
     width: 100%;
     z-index: 100;
     background-color: white;
@@ -71,7 +71,6 @@ body {
 }
 
 .nav-container .hamburger-lines {
-    display: block;
     height: 26px;
     width: 32px;
     position: absolute;
@@ -147,10 +146,47 @@ body {
     transform: rotate(-45deg);
 }
 
-#infoBox {
+.center {
+    align-content: center;
+}
+
+.infoBox {
     margin-bottom: 50px;
 
 }
+
+.destBox {
+    padding-top: 100px;
+    width: 1000px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+
+
+#map {
+    width: 600px;
+    height: 375px;
+    margin-bottom: 200px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 3px #aaaaaa;
+}
+
+.destBox2 {
+    float: right;
+    padding: 10px 50px 10px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    box-shadow: 5px 5px 3px #aaaaaa;
+
+}
+
+.destLines {
+    width: 100%;
+    margin: 10px;
+
+}
+
 #secondHeader {
     display: flex;
 }
@@ -256,7 +292,7 @@ div {
 }
 
 h3 {
-    font-size: 17px;
+    font-size: 20px;
     font-family: "Poppins", sans-serif;
 }
 
