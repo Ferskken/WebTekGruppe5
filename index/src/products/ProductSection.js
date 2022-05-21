@@ -6,6 +6,7 @@ import {ProductContext} from "../context/ProductContext"
 export default function ProductSection() {
     const products = useContext(ProductContext)
 
+
     const productElements = products.map(product => (
             <ProductCard
 
@@ -23,8 +24,6 @@ export default function ProductSection() {
     )
 
     return (
-
-
 
         <div className="offerRow">
             {productElements}

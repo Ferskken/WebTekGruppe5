@@ -5,10 +5,12 @@ import {MainSection} from "./MainSection";
 import {BrowserRouter as Router} from "react-router-dom";
 import {FAKE_PRODUCTS} from "./FakeData";
 import {ProductContext} from "./context/ProductContext"
+import {CartContext} from "./context/CartContext";
 
 
 export default function App() {
   const[products, setProducts] = useState([])
+    const[cartItems, setCartItems] = useState([])
 
    function setFakeProducts() {
       setProducts(FAKE_PRODUCTS)
@@ -25,10 +27,12 @@ export default function App() {
 
   return (
       <ProductContext.Provider value={products}>
-          <Router>
-              <Navbar/>
-              <MainSection/>
-          </Router>
+          <CartContext.Provider value={cartItems}>
+              <Router>
+                  <Navbar/>
+                  <MainSection/>
+              </Router>
+              </CartContext.Provider>
       </ProductContext.Provider>
 
   )

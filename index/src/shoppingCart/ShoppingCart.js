@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
+import {CartContext} from "../context/CartContext";
 
 export default function ShoppingCart() {
-        return (
+const cartItems = useContext(CartContext)
 
+
+        return (
             <div className="cartContainer">
 
                 <div className="Header">
