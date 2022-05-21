@@ -166,13 +166,12 @@ body {
 }
 
 #info {
-    margin: 30px 250px;
+    margin: 100px 250px 30px;
     min-width: 300px;
 }
 
 .offerColumn {
     background-color: whitesmoke;
-    /*flex-grow: 1;*/
     flex-direction: column;
     width: 100%;
 
@@ -191,7 +190,6 @@ body {
     padding-bottom: 50px;
     padding-top: 50px;
 
-   /* background-color: red; */
 }
 
 .offerPics {
@@ -201,11 +199,6 @@ body {
     min-width: 100px;
     transition: transform .3s;
 }
-
-/*.offerPics:hover {s
-    transform: scale(1.2);
-    border: 0.5px solid lightgray;
-}*/
 
 .articles {
     display: flex;
@@ -281,22 +274,6 @@ h3 {
 
 }
 
-/**
-.offerRow {
-   display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 20px;
-    justify-content: center;
-    padding: 10px;
-    height: auto;
-    padding-bottom: 50px;
-    padding-top: 50px;
-   /* background-color: red; */
-
-
 #chk{
     display: none;
 }
@@ -371,98 +348,53 @@ input{
     transform: scale(.6);
 }
 
-/** Commentsection */
+/** Review section */
 
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    padding: 20px;
-    margin-top: 100px;
-    width: 70%;
-    align-content: center;
-    background-color: whitesmoke;
-    background-clip: border-box;
-    border-radius: 6px;
+#reviewBox {
+    margin-top: 200px;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
-.comment-box {
+.addTxt {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #e5e8ed;
+}
+
+.commentBox {
+    margin-bottom: 30px;
+}
+
+.commentText {
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    box-shadow: 5px 5px 3px #aaaaaa;
+}
+
+.commentProfile {
     padding: 5px;
 }
 
-.form-control {
-    position: relative;
-    width: 80%;
+.profilePicture {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
-.rating {
-    display: flex;
-    margin-top: -10px;
-    flex-direction: row-reverse;
-    margin-left: -4px;
-    float: left
+.text1 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #56575b;
 }
-
-/*
-
-
-.rating>input {
-    display: none
+.text2 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 6px;
+    color: #56575b;
 }
-.rating>stars {
-
-    position: relative;
-    width: 10px;
-    font-size: 15px;
-    color: gold;
-    cursor: pointer
-}
-
-
-.rating>stars::before {
-    content: "\2605";
-    position: absolute;
-    opacity: 0
-}
-.rating>stars:hover:before,
-.rating>stars:hover~label:before {
-    opacity: 1 !important
-}
-.rating>input:checked~stars:before {
-    opacity: 1
-}
-.rating:hover>input:checked~stars:before {
-    opacity: 0.4
-}
-
-
- */
-
-.stars {
-    color: gold;
-    font-size: 1.3em;
-    justify-content: center;
-    display: flex;
-    margin: 25px 25px 25px 0px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .5s ease-in-out;
-}
-
-
-.cancelbtn {
-    width: 70px;
-}
-
-.cancelbtn:hover {
-    background-color: red;
-}
-
-.sendbtn {
-    width: 70px;
-}
-.sendbtn:hover {
-    background-color: green;
-}
-
