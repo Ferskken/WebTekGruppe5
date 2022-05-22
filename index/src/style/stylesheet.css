@@ -241,11 +241,12 @@ h4 {
    display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 50px;
     justify-content: center;
     height: auto;
+    width: 1200px;
     padding: 50px 10px;
 
 }
@@ -263,7 +264,7 @@ h4 {
     flex-direction: column;
     justify-content: space-between;
     height: 500px;
-    width: 80%;
+    width: 90%;
     min-width: 900px;
     transition: transform .3s;
     margin-bottom: 100px;
