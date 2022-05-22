@@ -1,11 +1,11 @@
-import {useContext} from "react";
-import {CartContext} from "../context/CartContext";
+import {useDispatch} from "react-redux";
+import {addItemToCart} from "../redux/shoppingCartSlice";
+
 
 export default function AddToCartButton(props) {
-    const cartContext = useContext(CartContext)
-    const addFunction = cartContext.handleAdd
+    const dispatch = useDispatch();
 
     return (
-        <button onClick={() => addFunction(props.product)}>Add</button>
+        <button className="articleBtn" onClick={() => dispatch(addItemToCart(props.product))}>Add to cart</button>
     )
 }

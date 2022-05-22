@@ -4,9 +4,6 @@ import AddToCartButton from "../shoppingCart/AddToCartButton";
 
 export default function ProductCard(props) {
 
-const cartContext = useContext(CartContext)
-const cartItems = cartContext.cartItems
-
 const [cartItemData, setCartItemData] = useState({
     id: props.product.id,
     alt: props.product.alt,
@@ -19,6 +16,7 @@ const [cartItemData, setCartItemData] = useState({
     groupSize: "",
     date:""
 })
+
 
 function test() {
         console.log(cartItemData)
@@ -109,7 +107,7 @@ function test() {
                         <br/>
                     </div>
 
-                <button className="articleBtn" id="buyBtn" onClick={test}> Legg til kurs </button>
+                    <AddToCartButton product={cartItemData}/>
 
                 </div>
             </div>
