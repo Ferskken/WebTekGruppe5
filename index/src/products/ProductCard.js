@@ -7,7 +7,18 @@ export default function ProductCard(props) {
 const cartContext = useContext(CartContext)
 const cartItems = cartContext.cartItems
 
-const [cartItemData, setCartItemData] = useState([props.product])
+const [cartItemData, setCartItemData] = useState({
+    id: props.product.id,
+    alt: props.product.alt,
+    title: props.product.title,
+    description: props.product.description,
+    duration: props.product.duration,
+    price: props.product.price,
+    timeOfDay:"",
+    language:"",
+    groupSize: "",
+    date:""
+})
 
 function test() {
         console.log(cartItemData)
@@ -46,19 +57,19 @@ function test() {
                             <select id="timeOfDay"
                                     className="productCardDrop"
                                     name="timeOfDay"
-                                    value={props.product.timeOfDay}
+                                    value={cartItemData.timeOfDay}
                                     onChange={handleChangeCartItemChange}
                             >
                                 <option value="hide">{"Tid på dagen"}</option>
-                                <option value="morning">{"10:00 - 14:00"}</option>
-                                <option value="evening">{"17:00 - 21:00"}</option>
+                                <option value="10:00 - 14:00">{"10:00 - 14:00"}</option>
+                                <option value="17:00 - 21:00">{"17:00 - 21:00"}</option>
                             </select>
                             <br />
                             <br />
 
                             <select className="productCardDrop"
                                     name="language"
-                                    value={props.product.language}
+                                    value={cartItemData.language}
                                     onChange={handleChangeCartItemChange}
                             >
                                 <option value="hide">{"Språk"}</option>
@@ -70,7 +81,7 @@ function test() {
 
                             <select className="productCardDrop"
                                     name="groupSize"
-                                    value={props.product.groupSize}
+                                    value={cartItemData.groupSize}
                                     onChange={handleChangeCartItemChange}
                             >
                                 <option value="hide">{"Antall deltagere"}</option>
@@ -82,7 +93,7 @@ function test() {
 
                             <select className="productCardDrop"
                                     name="date"
-                                    value={props.product.data}
+                                    value={cartItemData.date}
                                     onChange={handleChangeCartItemChange}
                             >
                                 <option value="hide">{"Velg dato"}</option>

@@ -1,7 +1,7 @@
 export const FAKE_PRODUCTS = [
     {
         "id": 1,
-        "alt":"none",
+        "alt":"Happy dog",
         "title": "Two day course",
         "description": "For newcomers",
         "duration":"4 hrs per day",
@@ -13,6 +13,7 @@ export const FAKE_PRODUCTS = [
     },
     {
         "id": 2,
+        "alt":"People talking",
         "title": "One day course",
         "description": "For experienced",
         "duration":"6 hours",
@@ -24,6 +25,7 @@ export const FAKE_PRODUCTS = [
     },
     {
         "id": 3,
+        "alt":"Happy members of RK",
         "title": "Consultation",
         "description": "for specific questions",
         "duration":"Up to 1 hour",
