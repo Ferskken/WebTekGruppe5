@@ -41,6 +41,7 @@ function test() {
    }
 
     return (
+
         <article className="articles">
             <div className="offerColumn">
                 <div className="article_image">

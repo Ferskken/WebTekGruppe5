@@ -10,6 +10,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+h4 {
+    color: indianred;
+}
+
 .container {
     max-width: 1050px;
     width: 90%;
@@ -147,19 +151,23 @@ body {
 }
 
 .center {
+    position: center;
     align-content: center;
+    justify-content: center;
+    max-width: 1010px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .infoBox {
     margin-bottom: 50px;
+    margin-top: 50px;
 
 }
 
 .destBox {
     padding-top: 100px;
     width: 1000px;
-    margin-left: 250px;
-    margin-right: 250px;
 }
 
 
@@ -175,7 +183,6 @@ body {
 .destBox2 {
     float: right;
     padding: 10px 50px 10px;
-    background-color: whitesmoke;
     border-radius: 4px;
     box-shadow: 5px 5px 3px #aaaaaa;
 
@@ -190,46 +197,19 @@ body {
 /** Core value section **/
 
 .coreValues {
-    margin-left: 250px;
-    margin-right: 250px;
-    position: relative;
-    display: inline-block;
-}
-
-.dropdownBtn {
-    background-color: darkred;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdownBtn:hover, .dropdownBtn:focus {
-    background-color: indianred;
+    display: flex;
+    min-width: 300px;
 }
 
 .coreValuesContent {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 5px 5px 3px #aaaaaa;
+
 
 }
 
-.coreValuesContent p {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-
-.show {
-    display: block;
-}
 
 #secondHeader {
     display: flex;
@@ -240,13 +220,13 @@ body {
     position: center;
     margin-right: 330px;
     margin-left: 250px;
-    margin-top: 150px;
+    margin-top: 100px;
     min-width: 300px;
     max-width: 540px;
 }
 
 #info {
-    margin: 100px 250px 30px;
+    margin: 20px 0px 5px;
     min-width: 300px;
 }
 
@@ -293,7 +273,7 @@ body {
 .articles:hover {
     transform: scale(1.1);
     /*border: solid 1px red;*/
-    box-shadow: 0 0 10px indianred;
+    /*box-shadow: 0 0 10px indianred;*/
 }
 
 .article_image {
@@ -430,8 +410,6 @@ input{
 
 #reviewBox {
     margin-top: 200px;
-    margin-left: 250px;
-    margin-right: 250px;
 }
 
 .addTxt {
@@ -481,12 +459,15 @@ input{
 
 
 .cartContainer{
+    width: 1000px;
     padding: 20px;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 100px;
     border-radius: 20px;
     box-shadow: 0 5px 10px indianred;
+
+
 }
 
 .Header{
@@ -615,9 +596,23 @@ hr{
     color: white;
 }
 
+
 .heartbeatPic {
     margin-right: 250px;
     margin-left: 250px;
     width: 800px;
     height: 200px;
 }
+
+.heartbeatPic2 {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 50px;
+
+}
+
+.heartbeatBoxLP {
+    margin-top: 100px;
+    width: 100%;
+}
+

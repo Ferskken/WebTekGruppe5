@@ -2,37 +2,51 @@ import React from "react";
 
 export default function CoreValues() {
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
 
-function dropFunction() {
-  document.getElementById("coreValuesDrop").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropdownBtn')) {
-    var dropdowns = document.getElementsByClassName("coreValuesContent");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
     return (
 
             <div className="coreValues">
 
-                  <button onClick={"dropFunction()"} className="dropdownBtn">Kjerneverider:</button>
-
                           <div id="coreValuesDrop" className="coreValuesContent">
-                              <h4>mimimi</h4>
+                              <h3>Kjerneverider.</h3>
                               <br/>
-                              <p>mimimimi</p>
+                              <br/>
+
+                              <h4>Alle liv er like mye verdt:</h4>
+                              <br/>
+                              <p>
+                               Lorem Ipsum is not simply random text.
+                               It has roots in a piece of classical Latin literature from 45 BC,
+                               making it over 2000 years old.</p>
+                              <br/>
+                              <br/>
+
+                              <h4>Alle skal ha tilgang til hjelp uansett hva:</h4>
+                              <br/>
+                              <p>
+                              Lorem Ipsum is not simply random text.
+                              It has roots in a piece of classical Latin literature from 45 BC,
+                              making it over 2000 years old.Lorem Ipsum is not simply random text.
+                              It has roots in a piece of classical Latin literature from 45 BC,
+                              making it over 2000 years old.</p>
+                              <br/>
+                              <br/>
+
+                              <h4>Vi bryr oss:</h4>
+                              <br/>
+                              <p>
+                               Lorem Ipsum is not simply random text.
+                               It has roots in a piece of classical Latin literature from 45 BC,
+                               making it over 2000 years old.
+                               </p>
+                              <br/>
+
                           </div>
+
             </div>
     )
 }
+
+/**
+                  <button onClick={"dropFunction()"} className="dropdownBtn">Kjerneverider:</button>
+*/
