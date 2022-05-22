@@ -14,8 +14,17 @@ export default class LandingPage extends React.Component {
               <div id="secondHeader">
                   <img src={require("../pictures/rk2.png")} id="landingPagePic"  alt={"rodeKors2"}/>
               </div>
-
               <div className="infoBox">
+                  <h4>Velkommen til Aalesund Røde Kors!</h4>
+                  <br/>
+                  <p>
+                      Aalesund Røde Kors mobiliserer frivillighet gjennom rednings-
+                      og beredskapsarbeid og omsorgsaktiviteter.
+                      I Aalesund Røde Kors har vi aktiviteter innen Barnas Røde Kors,
+                      Besøkstjeneste, Røde Kors Ungdom og Hjelpekorps.
+                      Mange av våre aktiviteter holdes på Fellesverket.
+                      Velkommen som deltaker eller frivillig i Aalesund Røde Kors!
+                  </p>
                   <p id="info">
 
                       Contrary to popular belief, Lorem Ipsum is not simply random text.
@@ -36,9 +45,6 @@ export default class LandingPage extends React.Component {
 
                   </p>
 
-                  <div className="heartbeatBox">
-                      <img src={require("../pictures/heartbeat.png")} className="heartbeatPic"  alt={"heartbeatHeader"}/>
-                  </div>
 
                       <div className="destBox">
                           {/* eslint-disable-next-line jsx-a11y/iframe-has-title */}
@@ -74,6 +80,10 @@ export default class LandingPage extends React.Component {
 
                       </div>
               </div>
+
+                  <div className="heartbeatBox">
+                      <img src={require("../pictures/heartbeat.png")} className="heartbeatPic2"  alt={"heartbeatHeader"}/>
+                  </div>
 
                  <CoreValues />
 
