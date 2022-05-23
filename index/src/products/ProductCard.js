@@ -11,17 +11,17 @@ const [cartItemData, setCartItemData] = useState({
     description: props.product.description,
     duration: props.product.duration,
     price: props.product.price,
-    timeOfDay:null,
-    language:null,
-    groupSize: null,
-    date:null
+    timeOfDay: undefined,
+    language: undefined,
+    groupSize: undefined,
+    date: undefined
 })
 
     function displayAddButtonForCorrectValues(){
-         if(cartItemData.timeOfDay !== null &&
-            cartItemData.language !== null &&
-            cartItemData.groupSize !== null &&
-            cartItemData.date !== null) {
+         if(cartItemData.timeOfDay !== undefined &&
+            cartItemData.language !== undefined &&
+            cartItemData.groupSize !== undefined &&
+            cartItemData.date !== undefined) {
              return <AddToCartButton product={cartItemData}/>
         }
     }
@@ -30,34 +30,69 @@ const [cartItemData, setCartItemData] = useState({
         console.log(cartItemData)
     }
 
-    function handleChangeCartItemChange(event) {
-        console.log(event)
-        const {name, value} = event.target
+    function handleCartItemChange(event) {
 
+        const {name, value} = event.target
         setCartItemData(prevCartItemData => {
             return {
                 ...prevCartItemData,
-                [name]: value
+                [name]: value,
             }
         })
     }
 
-   function handleSubmitToCart(){
+    function handlePrice() {
 
-   }
+        if(cartItemData.groupSize === "5" && cartItemData.title === "Two day course") {
+            setCartItemData(prevCartItemData => {
+                return {
+                    ...prevCartItemData,
+                    price: 35000
+                }
+            })
+        }
+
+        if(cartItemData.groupSize === "1" && cartItemData.title === "Two day course") {
+            setCartItemData(prevCartItemData => {
+                return {
+                    ...prevCartItemData,
+                    price: 8000
+                }
+            })
+        }
+
+        if(cartItemData.groupSize === "5" && cartItemData.title === "One day course") {
+            setCartItemData(prevCartItemData => {
+                return {
+                    ...prevCartItemData,
+                    price: 20000
+                }
+            })
+        }
+
+        if(cartItemData.groupSize === "1" && cartItemData.title === "One day course") {
+            setCartItemData(prevCartItemData => {
+                return {
+                    ...prevCartItemData,
+                    price: 5000
+                }
+            })
+        }
+    }
+
 
     return (
 
         <article className="articles">
             <div className="offerColumn">
                 <div className="article_image">
-                    <img className="offerPics" src={require("../pictures/" + props.product.id + ".jpg")} alt={props.product.alt}/>
+                    <img className="offerPics" src={require("../pictures/" + cartItemData.id + ".jpg")} alt={cartItemData.alt}/>
                 </div>
                 <div className="article_text">
                     <div className="article_intro">
-                        <h1>{props.product.title}</h1>
+                        <h1>{cartItemData.title}</h1>
                         <br/>
-                        <p>{props.product.text}</p>
+                        <p>{cartItemData.description}</p>
                         <br/>
                         <p>{"Vennligst kryss av under:"}</p>
                         <form>
@@ -65,7 +100,7 @@ const [cartItemData, setCartItemData] = useState({
                                     className="productCardDrop"
                                     name="timeOfDay"
                                     value={cartItemData.timeOfDay}
-                                    onChange={handleChangeCartItemChange}
+                                    onChange={handleCartItemChange}
                             >
                                 <option value="hide">{"Tid på dagen"}</option>
                                 <option value="10:00 - 14:00">{"10:00 - 14:00"}</option>
@@ -77,7 +112,7 @@ const [cartItemData, setCartItemData] = useState({
                             <select className="productCardDrop"
                                     name="language"
                                     value={cartItemData.language}
-                                    onChange={handleChangeCartItemChange}
+                                    onChange={handleCartItemChange}
                             >
                                 <option value="hide">{"Språk"}</option>
                                 <option value="norwegian">{"Norsk"}</option>
@@ -89,7 +124,8 @@ const [cartItemData, setCartItemData] = useState({
                             <select className="productCardDrop"
                                     name="groupSize"
                                     value={cartItemData.groupSize}
-                                    onChange={handleChangeCartItemChange}
+                                    onChange={handleCartItemChange}
+                                    onClick={handlePrice}
                             >
                                 <option value="hide">{"Antall deltagere"}</option>
                                 <option value="1">{"1 (Alene)"}</option>
@@ -101,7 +137,7 @@ const [cartItemData, setCartItemData] = useState({
                             <select className="productCardDrop"
                                     name="date"
                                     value={cartItemData.date}
-                                    onChange={handleChangeCartItemChange}
+                                    onChange={handleCartItemChange}
                             >
                                 <option value="hide">{"Velg dato"}</option>
                                 <option value="1.januar">{"1.januar"}</option>
@@ -111,8 +147,8 @@ const [cartItemData, setCartItemData] = useState({
                             <br />
                         </form>
 
-                        <p>{props.product.duration}</p>
-                        <h3>{props.product.price} kr</h3>
+                        <p>{cartItemData.duration}</p>
+                        <h3>{cartItemData.price} kr</h3>
                         <br/>
                     </div>
 
