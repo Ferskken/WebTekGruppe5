@@ -13,13 +13,22 @@ export default function Navbar() {
 
     const cart = useSelector(state => state.cartStore.cart)
 
-    let itemCount = function () {
+    function getItemCount () {
         let totalProducts = 0;
         for (let itemId in cart) {
             const item = cart[itemId];
             totalProducts += item.count;
         }
         return totalProducts;
+    }
+
+    function displayCart() {
+        if(getItemCount() > 0) {
+            return `Handlekurv (${getItemCount()})`
+        }
+        else {
+            return "Handlekurv"
+        }
     }
 
     return (
@@ -38,7 +47,7 @@ export default function Navbar() {
                      <ul className="menu-items" id={"menuList"}>
                         <li><ActiveLink to="/">Hjem</ActiveLink></li>
                         <li><ActiveLink to="/produkter">Produkter</ActiveLink></li>
-                        <li><ActiveLink to="/handlekurv">Handlekurv ({itemCount()})</ActiveLink></li>
+                        <li><ActiveLink to="/handlekurv">{displayCart()}</ActiveLink></li>
                         <li><ActiveLink to="/dinside">Din side</ActiveLink></li>
                     </ul>
              </div>
