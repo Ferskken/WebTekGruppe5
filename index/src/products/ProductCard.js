@@ -11,14 +11,22 @@ const [cartItemData, setCartItemData] = useState({
     description: props.product.description,
     duration: props.product.duration,
     price: props.product.price,
-    timeOfDay:"",
-    language:"",
-    groupSize: "",
-    date:""
+    timeOfDay:null,
+    language:null,
+    groupSize: null,
+    date:null
 })
 
+    function displayAddButtonForCorrectValues(){
+         if(cartItemData.timeOfDay !== null &&
+            cartItemData.language !== null &&
+            cartItemData.groupSize !== null &&
+            cartItemData.date !== null) {
+             return <AddToCartButton product={cartItemData}/>
+        }
+    }
 
-function test() {
+    function test() {
         console.log(cartItemData)
     }
 
@@ -108,8 +116,7 @@ function test() {
                         <br/>
                     </div>
 
-                    <button onClick={test}>test</button>
-                    <AddToCartButton product={cartItemData}/>
+                    {displayAddButtonForCorrectValues()}
 
                 </div>
             </div>
