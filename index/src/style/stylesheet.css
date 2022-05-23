@@ -481,6 +481,11 @@ input{
 
 }
 
+.Cart-options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .Header{
     margin: auto;
     width: 90%;
@@ -495,11 +500,13 @@ input{
     color: #2F3841;
 }
 .Action{
-    font-size: 14px;
+    background-color: transparent;
+
+    font-size: 17px;
     font-weight: 600;
     color: #E44C4C;
     cursor: pointer;
-    border-bottom: 1px solid #E44C4C;
+    border: none;
 }
 
 .Cart-Items{

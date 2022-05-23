@@ -96,8 +96,8 @@ function test() {
                                     onChange={handleChangeCartItemChange}
                             >
                                 <option value="hide">{"Velg dato"}</option>
-                                <option value="dato1">{"1.januar"}</option>
-                                <option value="dato2">{"2.januar"}</option>
+                                <option value="1.januar">{"1.januar"}</option>
+                                <option value="2.januar">{"2.januar"}</option>
                             </select>
                             <br />
                             <br />
@@ -108,6 +108,7 @@ function test() {
                         <br/>
                     </div>
 
+                    <button onClick={test}>test</button>
                     <AddToCartButton product={cartItemData}/>
 
                 </div>

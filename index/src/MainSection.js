@@ -3,6 +3,7 @@ import LoginOrSignup from "./login/LoginOrSignup";
 import ProductSection from "./products/ProductSection";
 import {Route, Routes} from "react-router-dom";
 import ShoppingCart from "./shoppingCart/ShoppingCart";
+import {useSelector} from "react-redux";
 
 
 /**
@@ -10,6 +11,7 @@ import ShoppingCart from "./shoppingCart/ShoppingCart";
  * @return {JSX.Element}
  * @constructor
  */
+
 export function MainSection() {
     return <main>
         <Routes>
