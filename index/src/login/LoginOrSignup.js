@@ -38,9 +38,15 @@ export default function LoginOrSignup() {
     }
 
     return(
+
         <div className="offerRow">
 
+            <div id="loggedInnAs">
+                <p id="loggedInnAsText">Hei: *****</p>
+            </div>
+
             <div className="main-form">
+
                 <input type="checkbox" id="chk" aria-hidden="true"/>
 
                     <div className="signup">

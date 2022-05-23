@@ -15,6 +15,7 @@ export default function Navbar() {
                         <span className="line line2"/>
                         <span className="line line3"/>
                     </div>
+
                     <div className="logo">
                         <h1><img src={require("../pictures/rk.jpg")} alt={"rodeKors"}/></h1>
                     </div>
