@@ -471,6 +471,11 @@ input{
 
 }
 
+.Cart-options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .Header{
     margin: auto;
     width: 90%;

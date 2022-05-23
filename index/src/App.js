@@ -18,8 +18,6 @@ export default function App() {
 
     useEffect(() => {
             loadProducts();
-            console.log("product length: " + products.length)
-            console.log("cart length: " + cart[0])
     });
 
    function setFakeProducts() {
