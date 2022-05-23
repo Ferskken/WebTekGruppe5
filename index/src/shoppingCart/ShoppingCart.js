@@ -31,12 +31,15 @@ export default function ShoppingCart() {
 					</div>
 
 				</div>
+
 				<ul className="Cart-options">
 					<li>tid på dagen: {item.product.timeOfDay}</li>
 					<li>Språk: {item.product.language}</li>
 					<li>Gruppestørrelse: {item.product.groupSize} pers</li>
 					<li>Dato: {item.product.date}</li>
+					<RemoveFromCartButton className="Action" id={item.product.id}/>
 				</ul>
+
 				<hr/>
 			</>
 
@@ -49,7 +52,7 @@ export default function ShoppingCart() {
 
                 <div className="Header">
                    	<h3 className="Heading">Handlekurv</h3>
-					<RemoveFromCartButton className="Action" id={DELETE_ALL}></RemoveFromCartButton>
+					<RemoveFromCartButton className="Action" id={DELETE_ALL}/>
 
 
                 </div>

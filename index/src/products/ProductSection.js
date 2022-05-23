@@ -1,7 +1,5 @@
 import React, {useContext} from "react"
 import ProductCard from "./ProductCard";
-import Review from "../reviews/Review";
-import {ProductContext} from "../context/ProductContext"
 import {useSelector} from "react-redux";
 
 export default function ProductSection() {
