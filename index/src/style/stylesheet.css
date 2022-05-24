@@ -7,7 +7,7 @@
     3. Content on landing-page (line: 189)
     4. Products and articles (line: 343)
     5. Login and Signup form (line: 420)
-    6. Shopping cart (line: 523)
+    6. Shopping cart (line: 545)
 
  */
 
@@ -422,11 +422,33 @@ div {
 #loggedInnAs {
     width: 100%;
     height: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 #loggedInnAsText {
+    font-size: 20px;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+#logoutBtn {
+    height: 40px;
+    width: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorMessage {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logoutBtnBox {
+    width: 100%;
+    margin-top: 20px;
 }
 
 .main-form {

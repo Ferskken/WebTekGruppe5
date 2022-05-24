@@ -2,6 +2,7 @@ import React, {useState} from "react";
 
 export default function LoginOrSignup() {
 
+
     const [signUpFormData, setSignUpFormData] = useState({
         username: "",
         email: "",
@@ -9,10 +10,37 @@ export default function LoginOrSignup() {
         confirmPassword: ""
     })
 
+    const adminUser = {username:"admin", password:"123"}
+
     const [loginFormData, setLoginFormData] = useState({
         username:"",
         password:""
     })
+
+    const [message, setMessage] = useState("");
+
+    const [error, setError] = useState("");
+
+    const Login = loginFormData => {
+        console.log(loginFormData);
+        if (loginFormData.username === adminUser.username && loginFormData.password === adminUser.password){
+        console.log("Logged in");
+        setLoginFormData({
+            username: loginFormData.username,
+            password: loginFormData.password
+        });
+        setMessage("Logged in as: ");
+        } else {
+        console.log("Details do not match");
+        setError("Details do not match");
+        }
+    }
+
+    const Logout = () => {
+        setLoginFormData({ username:"", password:"" })
+        setError({ error:"" })
+    }
+
 
     function handleChangeSignUp(event) {
         console.log(signUpFormData)
@@ -33,17 +61,23 @@ export default function LoginOrSignup() {
     }
 
     function handleSubmit(event) {
-        event.preventDefault()
-        console.log(``)
-    }
+        event.preventDefault();
+        Login(loginFormData);
+     }
+
+
+    /** **/
+
 
     return(
 
         <div className="offerRow">
 
-            <div id="loggedInnAs">
-                <p id="loggedInnAsText">Hei: *****</p>
-            </div>
+
+                <div id="loggedInnAs">
+                     <p id="loggedInnAsText">{message} <span>{loginFormData.username}</span></p>
+                     {(error !== "") ? (<div className="errorMessage">{error}</div> ) : ""}
+                </div>
 
             <div className="main-form">
 
@@ -100,10 +134,15 @@ export default function LoginOrSignup() {
                                 onChange={handleChangeLogin}
                                 value={loginFormData.password}
                             />
-                            <button className="su-log-btn">Login</button> 
+                            <button className="su-log-btn">Login</button>
                         </form>
                     </div>
             </div>
+            <div className="logoutBtnBox">
+            <button id="logoutBtn" onClick={Logout}>Logout</button>
+            </div>
+
         </div>
+
     )
 }
