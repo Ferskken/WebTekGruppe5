@@ -1,5 +1,4 @@
-import React, {useContext, useState} from "react";
-import {CartContext} from "../context/CartContext";
+import React, {useState} from "react";
 import AddToCartButton from "../shoppingCart/AddToCartButton";
 
 export default function ProductCard(props) {

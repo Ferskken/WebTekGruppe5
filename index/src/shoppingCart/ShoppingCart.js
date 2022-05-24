@@ -1,4 +1,3 @@
-import React, {useContext} from "react";
 import {useSelector} from "react-redux";
 import {RemoveFromCartButton, DELETE_ALL} from "./RemoveFromCartButton"
 

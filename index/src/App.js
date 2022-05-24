@@ -9,8 +9,6 @@ import {setProducts} from "./redux/productSlice";
 
 
 export default function App() {
-//  const[products, setProducts] = useState([])
-//    const[cartItems, setCartItems] = useState([])
     const products = useSelector(state => state.productStore.products)
     const cart = useSelector(state => state.cartStore.cart)
 
