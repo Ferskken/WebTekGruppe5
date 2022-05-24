@@ -16,8 +16,8 @@ export default function ShoppingCart() {
 		totalPrice += price;
 		totalProducts += item.count;
 		const itemRow =
-			<>
-				<div className="Cart-Items">
+			<div key={item.product.id}>
+				<div className="Cart-Items" key={item.product.id}>
 
 					<div className="about">
 						<h1 className="title">{item.product.title}</h1>
@@ -40,7 +40,7 @@ export default function ShoppingCart() {
 				</ul>
 
 				<hr/>
-			</>
+			</div>
 
 		cartItems.push(itemRow);
 	}

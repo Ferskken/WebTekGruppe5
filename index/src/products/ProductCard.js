@@ -5,7 +5,6 @@ export default function ProductCard(props) {
 
 const [cartItemData, setCartItemData] = useState({
     id: props.product.id,
-    alt: props.product.alt,
     title: props.product.title,
     description: props.product.description,
     duration: props.product.duration,
@@ -85,7 +84,7 @@ const [cartItemData, setCartItemData] = useState({
         <article className="articles">
             <div className="offerColumn">
                 <div className="article_image">
-                    <img className="offerPics" src={require("../pictures/" + cartItemData.id + ".jpg")} alt={cartItemData.alt}/>
+                    <img className="offerPics" src={require("../pictures/" + cartItemData.id + ".jpg")} alt={"a picture"}/>
                 </div>
                 <div className="article_text">
                     <div className="article_intro">
