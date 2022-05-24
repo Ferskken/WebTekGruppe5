@@ -1,7 +1,9 @@
 import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginOrSignup() {
 
+    const nav = useNavigate();
 
     const [signUpFormData, setSignUpFormData] = useState({
         username: "",
@@ -26,6 +28,7 @@ export default function LoginOrSignup() {
         if (loginFormData.username === adminUser.username && loginFormData.password === adminUser.password){
         console.log("Logged in");
         setLoginFormData({
+        //Change, make indirect method changing values on successful login
             username: loginFormData.username,
             password: loginFormData.password
         });
@@ -40,6 +43,7 @@ export default function LoginOrSignup() {
     const Logout = () => {
         setLoginFormData({ username:"", password:"" })
         setError({ error:"" })
+        nav("/");
     }
 
 
