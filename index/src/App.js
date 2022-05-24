@@ -15,17 +15,20 @@ export default function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-            loadProducts();
+            loadFakeProducts();
     },[]);
 
    function setFakeProducts() {
       dispatch(setProducts(FAKE_PRODUCTS))
    };
 
-   function loadProducts() {
+   function loadRealProducts() {
        sendApiRequest("GET", "/api/products", function(products) {dispatch(setProducts(products));}, null, "Test import")
    };
 
+   function loadFakeProducts() {
+       dispatch(setProducts(FAKE_PRODUCTS))
+   }
 
   return (
               <Router>

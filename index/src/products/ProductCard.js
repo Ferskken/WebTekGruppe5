@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import AddToCartButton from "../shoppingCart/AddToCartButton";
+import {useSelector} from "react-redux";
 
 export default function ProductCard(props) {
 
+// State to store the current data of the product
 const [cartItemData, setCartItemData] = useState({
     id: props.product.id,
     title: props.product.title,
@@ -15,6 +17,8 @@ const [cartItemData, setCartItemData] = useState({
     date: undefined
 })
 
+
+    // Only display add to cart button if all selects are selected
     function displayAddButtonForCorrectValues(){
          if(cartItemData.timeOfDay !== undefined &&
             cartItemData.language !== undefined &&
@@ -24,12 +28,8 @@ const [cartItemData, setCartItemData] = useState({
         }
     }
 
-    function test() {
-        console.log(cartItemData)
-    }
-
+    //Updates the cart when the form changes
     function handleCartItemChange(event) {
-
         const {name, value} = event.target
         setCartItemData(prevCartItemData => {
             return {
@@ -39,6 +39,7 @@ const [cartItemData, setCartItemData] = useState({
         })
     }
 
+    //Displays the correct price depending on the group size
     function handlePrice() {
 
         if(cartItemData.groupSize === "5" && cartItemData.title === "Two day course") {

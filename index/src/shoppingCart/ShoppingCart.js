@@ -9,7 +9,9 @@ export default function ShoppingCart() {
 	let totalPrice = 0;
     let totalProducts = 0;
 
-
+	/**
+	 * Loops over all the items in the cart.
+	 */
 	for (let itemId in cart) {
 		const item = cart[itemId];
 		const price = item.product.price * item.count;
@@ -42,18 +44,16 @@ export default function ShoppingCart() {
 				<hr/>
 			</div>
 
+		//Adds the item to the redux store
 		cartItems.push(itemRow);
 	}
 
 
 	return (
             <div className="cartContainer">
-
                 <div className="Header">
                    	<h3 className="Heading">Handlekurv</h3>
 					<RemoveFromCartButton className="Action" id={DELETE_ALL} buttonText={"Fjern alt"}/>
-
-
                 </div>
 
 				{cartItems}

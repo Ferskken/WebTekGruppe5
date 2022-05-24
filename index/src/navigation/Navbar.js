@@ -6,13 +6,16 @@ import {ActiveLink} from "./ActiveLink";
 import {useSelector} from "react-redux";
 import {SHOPPING_CART_COUNT} from "../shoppingCart/ShoppingCart";
 
+/**
+ * Navbar which includes navigation to all the pages
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Navbar() {
-
-    const products = useSelector(state => state.productStore.products)
-    const productLength = products.length
 
     const cart = useSelector(state => state.cartStore.cart)
 
+    //Gets the total amount of products in the cart
     function getItemCount () {
         let totalProducts = 0;
         for (let itemId in cart) {
@@ -22,6 +25,7 @@ export default function Navbar() {
         return totalProducts;
     }
 
+    //Displays the amount of products in the cart if they are > 0
     function displayCart() {
         if(getItemCount() > 0) {
             return `Handlekurv (${getItemCount()})`
