@@ -15,6 +15,7 @@ import heartbeat from "../pictures/Heartbeatcropped.png"
  */
 export default function Navbar() {
     const cart = useSelector(state => state.cartStore.cart)
+    const user = useSelector(state => state.userStore.user)
 
     //Gets the total amount of products in the cart
     function getItemCount () {
@@ -36,6 +37,14 @@ export default function Navbar() {
         }
     }
 
+    function displayUser() {
+        if(user.username) {
+            return `Hei! ${user.username}`
+        } else {
+            return "din side"
+        }
+    }
+
     return (
         <nav>
             <div className="navbar">
@@ -54,7 +63,7 @@ export default function Navbar() {
                         <li><ActiveLink to="/">Hjem</ActiveLink></li>
                         <li><ActiveLink to="/produkter">Produkter</ActiveLink></li>
                         <li><ActiveLink to="/handlekurv">{displayCart()}</ActiveLink></li>
-                        <li><ActiveLink to="/dinside">Din side</ActiveLink></li>
+                        <li><ActiveLink to="/dinside">din side</ActiveLink></li>
                     </ul>
              </div>
             </div>

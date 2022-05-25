@@ -1,6 +1,6 @@
 // Authentication stuff
 
-import {sendApiRequest} from "./requests";
+import {sendApiRequest} from "./request";
 import {deleteCookie, getCookie, setCookie} from "./cookies";
 
 /**
@@ -43,7 +43,7 @@ export function sendAuthenticationRequest(username, password, successCallback, e
         "password": password
     };
     sendApiRequest(
-        "POST", "/authenticate",
+        "POST", "/api/authenticate",
         function (jwtResponse) {
             setCookie("jwt", jwtResponse.jwt);
             const userData = parseJwtUser(jwtResponse.jwt);

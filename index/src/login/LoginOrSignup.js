@@ -1,8 +1,15 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import {sendApiRequest} from "../api/request";
+import {useDispatch, useSelector} from "react-redux";
+import {sendAuthenticationRequest} from "../api/authentication";
+import {setUser} from "../redux/userSlice";
 
 export default function LoginOrSignup() {
+
+    const user = useSelector(state => state.userStore.user)
+
+    const dispatch = useDispatch();
 
     const [signUpFormData, setSignUpFormData] = useState({
         username: "",
@@ -17,32 +24,6 @@ export default function LoginOrSignup() {
     const [message, setMessage] = useState("");
     const [error, setError] = useState("");
     const nav = useNavigate();
-
-    const adminUser = {username:"admin", password:"123"}
-
-    const Login = loginFormData => {
-        console.log(loginFormData);
-        if (loginFormData.username === adminUser.username && loginFormData.password === adminUser.password){
-        console.log("Logged in");
-        setLoginFormData({
-        //Change, make indirect method changing values on successful login
-            username: loginFormData.username,
-            password: loginFormData.password
-        });
-        setMessage("Logged in as: ");
-        } else {
-        console.log("Details do not match");
-        setError("Details do not match");
-        setMessage("");
-        }
-    }
-
-    const Logout = () => {
-        setLoginFormData({ username:"", password:"" })
-        setError({ error:"" })
-        nav("/");
-    }
-
 
     function handleChangeSignUp(event) {
         console.log(signUpFormData)
@@ -64,17 +45,30 @@ export default function LoginOrSignup() {
 
     function handleSignUpSubmit(event) {
         event.preventDefault();
-        const signUpData = {
-            "username": signUpFormData.username,
-            "email": signUpFormData.email,
-            "password": signUpFormData.password
-        };
-        console.log(signUpFormData)
-        sendApiRequest("POST", "/api/signup", onSignupSuccess, signUpData, errorMessage => setError(errorMessage))
+        if(signUpFormData.password === signUpFormData.confirmPassword) {
+            const signUpData = {
+                "username": signUpFormData.username,
+                "email": signUpFormData.email,
+                "password": signUpFormData.password
+            };
+            console.log(signUpFormData)
+            sendApiRequest("POST", "/api/signup", onSignupSuccess, signUpData, errorMessage => setError(errorMessage))
+        }
+        else {
+            console.log("password " + signUpFormData.password +
+                " and " + signUpFormData.confirmPassword + " do not match")
+        }
      }
 
      function handleLoginSubmit(event) {
+        event.preventDefault()
+         sendAuthenticationRequest(loginFormData.username, loginFormData.password,
+             onLoginSuccess,
+                 errorMessage => setError(errorMessage))
+     }
 
+     function onLoginSuccess(userData) {
+        dispatch(setUser(userData))
      }
 
     /**
@@ -131,7 +125,7 @@ export default function LoginOrSignup() {
                     </div>
 
                     <div className="login">
-                        <form onSubmit={handleSignUpSubmit}>
+                        <form onSubmit={handleLoginSubmit}>
                             <label htmlFor="chk" aria-hidden="true">Login</label>
                             <input type="text"
                                    placeholder="User name"
@@ -151,7 +145,6 @@ export default function LoginOrSignup() {
                     </div>
             </div>
             <div className="logoutBtnBox">
-            <button id="logoutBtn" onClick={Logout}>Logout</button>
             </div>
 
         </div>
