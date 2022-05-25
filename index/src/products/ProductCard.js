@@ -144,6 +144,7 @@ const [cartItemData, setCartItemData] = useState({
                             </select>
                             <br />
                             <br />
+                            <input type={"date"}/>
                         </form>
 
                         <p>{cartItemData.duration}</p>

@@ -9,6 +9,7 @@ export default function ProductSection() {
     const productElements = products.map(product => (
             <ProductCard
                 product={product}
+
                 key={product.id}
             />
         )

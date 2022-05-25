@@ -5,6 +5,7 @@ import LandingPage from "../pages/LandingPage";
 import {ActiveLink} from "./ActiveLink";
 import {useSelector} from "react-redux";
 import {SHOPPING_CART_COUNT} from "../shoppingCart/ShoppingCart";
+import heartbeat from "../pictures/Heartbeatcropped.png"
 
 /**
  * Navbar which includes navigation to all the pages

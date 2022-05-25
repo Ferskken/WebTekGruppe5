@@ -15,7 +15,7 @@ export default function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-            loadFakeProducts();
+            loadRealProducts()
     },[]);
 
    function setFakeProducts() {

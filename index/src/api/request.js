@@ -42,6 +42,7 @@ export function sendApiRequest(method, url, callback, requestBody, errorCallback
     const jwtToken = getCookie("jwt");
     if (jwtToken) {
         request.setRequestHeader("Authorization", "Bearer " + jwtToken);
+        request.setRequestHeader('Accept', '*/*');
     }
 
     // Do we need to include data in the request?

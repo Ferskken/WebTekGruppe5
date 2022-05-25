@@ -42,16 +42,24 @@ div {
 /** NAVIGATION BAR (HAMBURGER - MENU - PICTURE) **/
 
 .container {
+    background: white;
     max-width: 1050px;
     width: 90%;
     margin-left: 35px;
 }
 
 .navbar {
+    background-image: url("../pictures/Heartbeatcropped.png");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 400px;
     position: fixed;
     top: 0;
     width: 100%;
     background-color: white;
+}
+
+.heartbeat {
 }
 
 .nav-container {

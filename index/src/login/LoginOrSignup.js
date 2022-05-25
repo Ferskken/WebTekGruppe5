@@ -1,9 +1,8 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
+import {sendApiRequest} from "../api/request";
 
 export default function LoginOrSignup() {
-
-    const nav = useNavigate();
 
     const [signUpFormData, setSignUpFormData] = useState({
         username: "",
@@ -11,17 +10,15 @@ export default function LoginOrSignup() {
         password: "",
         confirmPassword: ""
     })
-
-    const adminUser = {username:"admin", password:"123"}
-
     const [loginFormData, setLoginFormData] = useState({
         username:"",
         password:""
     })
-
     const [message, setMessage] = useState("");
-
     const [error, setError] = useState("");
+    const nav = useNavigate();
+
+    const adminUser = {username:"admin", password:"123"}
 
     const Login = loginFormData => {
         console.log(loginFormData);
@@ -67,9 +64,21 @@ export default function LoginOrSignup() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        Login(loginFormData);
+        const signUpData = {
+            "username": signUpFormData.username,
+            "password": signUpFormData.password
+        };
+        console.log(signUpFormData)
+        sendApiRequest("POST", "/api/signup", onSignupSuccess, signUpData, errorMessage => setError(errorMessage))
      }
 
+
+    /**
+     * This function is called when signup was successful
+     */
+    function onSignupSuccess() {
+        nav("/");
+    }
 
     /** **/
 
@@ -77,12 +86,6 @@ export default function LoginOrSignup() {
     return(
 
         <div className="offerRow">
-
-
-                <div id="loggedInnAs">
-                     <p id="loggedInnAsText">{message} <span>{loginFormData.username}</span></p>
-                     {(error !== "") ? (<div className="errorMessage">{error}</div> ) : ""}
-                </div>
 
             <div className="main-form">
 
