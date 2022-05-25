@@ -7,13 +7,13 @@ import {useSelector} from "react-redux";
 import {SHOPPING_CART_COUNT} from "../shoppingCart/ShoppingCart";
 import heartbeat from "../pictures/Heartbeatcropped.png"
 
+
 /**
  * Navbar which includes navigation to all the pages
  * @returns {JSX.Element}
  * @constructor
  */
 export default function Navbar() {
-
     const cart = useSelector(state => state.cartStore.cart)
 
     //Gets the total amount of products in the cart

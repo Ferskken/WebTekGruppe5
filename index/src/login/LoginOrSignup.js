@@ -62,16 +62,20 @@ export default function LoginOrSignup() {
         }))
     }
 
-    function handleSubmit(event) {
+    function handleSignUpSubmit(event) {
         event.preventDefault();
         const signUpData = {
             "username": signUpFormData.username,
+            "email": signUpFormData.email,
             "password": signUpFormData.password
         };
         console.log(signUpFormData)
         sendApiRequest("POST", "/api/signup", onSignupSuccess, signUpData, errorMessage => setError(errorMessage))
      }
 
+     function handleLoginSubmit(event) {
+
+     }
 
     /**
      * This function is called when signup was successful
@@ -92,7 +96,7 @@ export default function LoginOrSignup() {
                 <input type="checkbox" id="chk" aria-hidden="true"/>
 
                     <div className="signup">
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSignUpSubmit}>
                             <label htmlFor="chk" aria-hidden="true">Sign up</label>
 
                             <input type="text"
@@ -127,7 +131,7 @@ export default function LoginOrSignup() {
                     </div>
 
                     <div className="login">
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSignUpSubmit}>
                             <label htmlFor="chk" aria-hidden="true">Login</label>
                             <input type="text"
                                    placeholder="User name"
