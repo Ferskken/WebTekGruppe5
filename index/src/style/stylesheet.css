@@ -190,13 +190,14 @@ div {
 .logo {
     position: fixed;
     right: 1px;
-    width: 205px;
+    width: 225px;
     background-color: white;
 }
 
 #logoNav {
     width: 160px;
     float: right;
+    margin-right: 20px;
 }
 
 
