@@ -133,18 +133,16 @@ const [cartItemData, setCartItemData] = useState({
                             <br />
                             <br />
 
-                            <select className="productCardDrop"
-                                    name="date"
-                                    value={cartItemData.date}
-                                    onChange={handleCartItemChange}
-                            >
-                                <option value="hide">{"Velg dato"}</option>
-                                <option value="1.januar">{"1.januar"}</option>
-                                <option value="2.januar">{"2.januar"}</option>
-                            </select>
+                            <input
+                                className="productCardDrop"
+                                type={"date"}
+                                placeholder={"dato"}
+                                name={"date"}
+                                onChange={handleCartItemChange}
+                                value={cartItemData.date}
+                                    />
                             <br />
                             <br />
-                            <input type={"date"}/>
                         </form>
 
                         <p>{cartItemData.duration}</p>
