@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import LoginOrSignup from "./LoginOrSignup";
 import UserPage from "./UserPage";
 import AdminPage from "./AdminPage";
-import {isAdmin} from "../api/authentication";
+import {deleteAuthorizationCookies, isAdmin} from "../api/authentication";
 import {unsetUser} from "../redux/userSlice";
 
 export default function DisplayYourPage() {
@@ -11,8 +11,9 @@ export default function DisplayYourPage() {
 
     const dispatch = useDispatch();
 
-    function doLogout(user) {
+    function doLogout() {
         dispatch(unsetUser())
+        deleteAuthorizationCookies()
     }
     return (
         <>
