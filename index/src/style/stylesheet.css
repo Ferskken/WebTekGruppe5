@@ -278,8 +278,9 @@ div {
 
 }
 
-.heartbeatBoxLP {
-    margin-top: 100px;
+.heartbeatBox {
+    margin-top: 20px;
+    margin-bottom: 100px;
     width: 100%;
 }
 
@@ -301,6 +302,7 @@ div {
 
 #secondHeader {
     display: flex;
+    margin-top: 50px;
 }
 
 /** Review section */

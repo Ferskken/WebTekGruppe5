@@ -82,7 +82,7 @@ export default class LandingPage extends React.Component {
               </div>
 
                   <div className="heartbeatBox">
-                      <img src={require("../pictures/heartbeat.png")} className="heartbeatPic2"  alt={"heartbeatHeader"}/>
+                      <img src={require("../pictures/NHpG.gif")} className="heartbeatPic2"  alt={"heartbeatHeader"}/>
                   </div>
 
                  <CoreValues />
