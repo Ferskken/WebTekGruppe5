@@ -176,11 +176,12 @@ div {
     transition: transform 0.5s ease-in-out;
     text-align: left;
     background-color: whitesmoke;
+    z-index: 100;
 
 }
 
 .navbar .menu-items li {
-    margin-bottom: 1.2rem;
+    margin-bottom: 3rem;
     font-size: 1.5rem;
     font-weight: 500;
     margin-left: 20px;
@@ -364,6 +365,8 @@ div {
     background-color: whitesmoke;
     flex-direction: column;
     width: 100%;
+    border-radius: 20px;
+
 }
 
 .offerRow {
@@ -377,6 +380,7 @@ div {
     height: auto;
     width: 1200px;
     padding: 50px 10px;
+
 }
 
 .offerPics {
@@ -385,6 +389,8 @@ div {
     min-height: 100px;
     min-width: 100px;
     transition: transform .3s;
+    border-radius: 20px;
+
 }
 
 .articles {
@@ -398,15 +404,25 @@ div {
     margin-bottom: 100px;
 }
 
-.articles:hover {
-    transform: scale(1.1);
+.article_intro {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 20px;
+
+}
+
+.article_intro:hover {
+    transform: scale(1.05);
 }
 
 .article_image {
+    padding: 20px;
     display: flex;
     float: left;
     z-index: 2;
     width: 50%;
+
 }
 
 .article_text {
@@ -420,15 +436,36 @@ div {
 
 .productCardDrop {
     width: 50%;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+    height: 25px;
+
+}
+
+#calendar {
+    width: 50%;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+#productPrice {
+    width: 95%;
 }
 
 .articleBtn {
-    width: 100px;
-    height: 30px;
+    font-size: 20px;
+    width: 150px;
+    height: 35px;
+    float: right;
+    background-color: whitesmoke;
+    border: 0.1px solid;
+    border-radius: 25px;
 }
 
 .articleBtn:hover {
-    box-shadow: 0 0 5px indianred;
+    font-weight: bolder;
+    color: green;
     transform: scale(1.1);
 }
 

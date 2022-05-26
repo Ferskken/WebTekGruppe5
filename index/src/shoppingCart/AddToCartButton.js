@@ -11,6 +11,6 @@ export default function AddToCartButton(props) {
     const dispatch = useDispatch();
 
     return (
-        <button className="articleBtn" onClick={() => dispatch(addItemToCart(props.product))}>Add to cart</button>
+        <button className="articleBtn" onClick={() => dispatch(addItemToCart(props.product))}>LEGG TIL</button>
     )
 }

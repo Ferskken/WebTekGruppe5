@@ -47,6 +47,8 @@ export default class LandingPage extends React.Component {
 
 
                       <div className="destBox">
+                          <h3>Hvordan nå oss?</h3>
+                          <br />
                           {/* eslint-disable-next-line jsx-a11y/iframe-has-title */}
                           <iframe id="map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12571.378074826756!2d6.156333833808631!3d62.47223347610891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4616da446b747bd3%3A0xb2493325ddba97e7!2s%C3%85lesund%20R%C3%B8de%20Kors%20Hjelpekorps!5e0!3m2!1sno!2sno!4v1653145504029!5m2!1sno!2sno"

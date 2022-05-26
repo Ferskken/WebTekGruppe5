@@ -85,7 +85,7 @@ const [cartItemData, setCartItemData] = useState({
         <article className="articles">
             <div className="offerColumn">
                 <div className="article_image">
-                    <img className="offerPics" src={require("../pictures/" + cartItemData.id + ".jpg")} alt={"a picture"}/>
+                    <img className="offerPics" src={require("../pictures/" + cartItemData.id + ".jpg")} alt={"productpicture"}/>
                 </div>
                 <div className="article_text">
                     <div className="article_intro">
@@ -146,11 +146,10 @@ const [cartItemData, setCartItemData] = useState({
                         </form>
 
                         <p>{cartItemData.duration}</p>
-                        <h3>{cartItemData.price} kr</h3>
-                        <br/>
+                        <h3 id="productPrice">{cartItemData.price} kr {displayAddButtonForCorrectValues()}</h3>
                     </div>
 
-                    {displayAddButtonForCorrectValues()}
+
 
                 </div>
             </div>
