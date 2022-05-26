@@ -57,7 +57,7 @@ export default function Navbar() {
                     </div>
 
                     <div className="logo">
-                        <h1><img id="logoNav" src={require("../pictures/rk.jpg")} alt={"rodeKors"}/></h1>
+                        <img id="logoNav" src={require("../pictures/rk.jpg")} alt={"rodeKors"}/>
                     </div>
                      <ul className="menu-items" id={"menuList"}>
                         <li><ActiveLink to="/">Hjem</ActiveLink></li>

@@ -189,14 +189,15 @@ div {
 
 .logo {
     position: fixed;
-    right: 1px;
-    width: 205px;
+    right: 0;
+    width: 225px;
     background-color: white;
 }
 
 #logoNav {
     width: 160px;
     float: right;
+    margin-right: 20px;
 }
 
 
@@ -217,23 +218,13 @@ div {
 #landingPagePic {
     display: flex;
     position: center;
-    margin-right: 330px;
-    margin-left: 250px;
-    margin-top: 100px;
+    margin: 100px 330px 100px 250px;
     min-width: 300px;
     max-width: 540px;
 }
 
-.infoBox {
-    margin-bottom: 50px;
-    margin-top: 50px;
 
-}
 
-#info {
-    margin: 20px 0px 5px;
-    min-width: 300px;
-}
 
 /** MAP AND DESCRIPTION **/
 
@@ -245,7 +236,7 @@ div {
 #map {
     width: 600px;
     height: 375px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     border-radius: 4px;
     box-shadow: 5px 5px 3px #aaaaaa;
 }
@@ -281,7 +272,6 @@ div {
 }
 
 .heartbeatBox {
-    margin-top: 20px;
     margin-bottom: 100px;
     width: 100%;
 }
@@ -311,6 +301,7 @@ div {
 
 #reviewBox {
     margin-top: 200px;
+    margin-bottom: 200px;
 }
 
 .addTxt {
