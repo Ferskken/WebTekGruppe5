@@ -41,7 +41,7 @@ export default function Navbar() {
         if(user) {
             return `Hei! ${user.username}`
         } else {
-            return "din side"
+            return "Din side"
         }
     }
 

@@ -9,8 +9,6 @@ import {sendApiRequest} from "./api/request";
 import {deleteAuthorizationCookies} from "./api/authentication";
 
 export default function App() {
-    const products = useSelector(state => state.productStore.products)
-    const cart = useSelector(state => state.cartStore.cart)
 
     const dispatch = useDispatch();
 
@@ -19,13 +17,13 @@ export default function App() {
             loadRealProducts()
     },[]);
 
-   function setFakeProducts() {
-      dispatch(setProducts(FAKE_PRODUCTS))
-   };
-
    function loadRealProducts() {
        sendApiRequest("GET", "/api/products", function(products) {dispatch(setProducts(products));})
    };
+
+    function setFakeProducts() {
+        dispatch(setProducts(FAKE_PRODUCTS))
+    };
 
   return (
               <Router>

@@ -1,9 +1,13 @@
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {RemoveFromCartButton, DELETE_ALL} from "./RemoveFromCartButton"
+import {setOrder} from "../redux/orderSlice";
+import {sendApiRequest} from "../api/request";
+import {emptyCart} from "../redux/shoppingCartSlice";
 
 export default function ShoppingCart() {
 
 	const cart = useSelector(state => state.cartStore.cart)
+	const dispatch = useDispatch();
 
 	let cartItems = [];
 	let totalPrice = 0;
@@ -37,7 +41,7 @@ export default function ShoppingCart() {
 					<li>tid på dagen: {item.product.timeOfDay}</li>
 					<li>Språk: {item.product.language}</li>
 					<li>Gruppestørrelse: {item.product.groupSize} pers</li>
-					<li>Dato: {item.product.date}</li>
+					<li>Startdato: {item.product.date}</li>
 					<RemoveFromCartButton className="Action" id={item.product.id} buttonText={"Fjern"}/>
 				</ul>
 
@@ -48,6 +52,19 @@ export default function ShoppingCart() {
 		cartItems.push(itemRow);
 	}
 
+	function createOrder() {
+		dispatch(setOrder(cartItems))
+		sendApiRequest("POST", "/api/order", onCreateOrderSuccess, cartItems, )
+		dispatch(emptyCart)
+	}
+
+	function onCreateOrderSuccess() {
+		console.log()
+	}
+
+	function displayErr() {
+		console.log("creating order failed.")
+	}
 
 	return (
             <div className="cartContainer">

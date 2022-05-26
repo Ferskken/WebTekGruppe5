@@ -134,7 +134,7 @@ const [cartItemData, setCartItemData] = useState({
                             <br />
 
                             <input
-                                className="productCardDrop"
+                                className="calendar"
                                 type={"date"}
                                 placeholder={"dato"}
                                 name={"date"}

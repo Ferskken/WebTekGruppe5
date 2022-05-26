@@ -20,7 +20,6 @@ export const cartSlice = createSlice({
                 state.cart[propertyName] = {product: product, count: 1};
             } else {
                 // Item already in the cart, increase count
-                return false;
             }
         },
         /**
