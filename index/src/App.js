@@ -1,3 +1,4 @@
+
 import {useState, useEffect} from "react";
 import Navbar from "./navigation/Navbar";
 import {MainSection} from "./MainSection";
@@ -6,7 +7,6 @@ import {FAKE_PRODUCTS} from "./FakeData";
 import {useDispatch, useSelector} from "react-redux";
 import {setProducts} from "./redux/productSlice";
 import {sendApiRequest} from "./api/request";
-import {deleteAuthorizationCookies} from "./api/authentication";
 
 export default function App() {
     const products = useSelector(state => state.productStore.products)
@@ -15,7 +15,6 @@ export default function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-            deleteAuthorizationCookies()
             loadRealProducts()
     },[]);
 
@@ -24,8 +23,12 @@ export default function App() {
    };
 
    function loadRealProducts() {
-       sendApiRequest("GET", "/api/products", function(products) {dispatch(setProducts(products));})
+       sendApiRequest("GET", "/api/products", function(products) {dispatch(setProducts(products));}, null, "Test import")
    };
+
+   function loadFakeProducts() {
+       dispatch(setProducts(FAKE_PRODUCTS))
+   }
 
   return (
               <Router>
