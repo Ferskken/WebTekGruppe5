@@ -38,7 +38,7 @@ export default function Navbar() {
     }
 
     function displayUser() {
-        if(user.username) {
+        if(user) {
             return `Hei! ${user.username}`
         } else {
             return "din side"
@@ -63,7 +63,7 @@ export default function Navbar() {
                         <li><ActiveLink to="/">Hjem</ActiveLink></li>
                         <li><ActiveLink to="/produkter">Produkter</ActiveLink></li>
                         <li><ActiveLink to="/handlekurv">{displayCart()}</ActiveLink></li>
-                        <li><ActiveLink to="/dinside">din side</ActiveLink></li>
+                        <li><ActiveLink to="/dinside">{displayUser()}</ActiveLink></li>
                     </ul>
              </div>
             </div>

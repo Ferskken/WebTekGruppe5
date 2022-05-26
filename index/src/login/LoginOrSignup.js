@@ -68,6 +68,7 @@ export default function LoginOrSignup() {
      }
 
      function onLoginSuccess(userData) {
+        console.log(userData)
         dispatch(setUser(userData))
      }
 
