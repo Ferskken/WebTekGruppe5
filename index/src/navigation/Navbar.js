@@ -38,7 +38,6 @@ export default function Navbar() {
 
     function displayUser() {
         if(user) {
-            console.log(user.roles[1])
             return `Hei! ${user.username}`
         } else {
             return "Din side"
