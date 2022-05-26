@@ -45,7 +45,7 @@ div {
     background: white;
     max-width: 1050px;
     width: 90%;
-    margin-left: 35px;
+    /*margin-left: 35px;*/
 }
 
 .navbar {
@@ -94,7 +94,7 @@ div {
     display: block;
     position: relative;
     height: 60px;
-    width: 70px;
+    width: 100px;
 }
 
 .nav-container .checkbox {
@@ -187,7 +187,14 @@ div {
 
 .logo {
     position: fixed;
-    right: 35px;
+    right: 1px;
+    width: 205px;
+    background-color: white;
+}
+
+#logoNav {
+    width: 160px;
+    float: right;
 }
 
 
