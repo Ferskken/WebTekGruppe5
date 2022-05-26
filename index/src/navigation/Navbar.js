@@ -4,8 +4,7 @@ import {Route, Routes} from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
 import {ActiveLink} from "./ActiveLink";
 import {useSelector} from "react-redux";
-import {SHOPPING_CART_COUNT} from "../shoppingCart/ShoppingCart";
-import heartbeat from "../pictures/Heartbeatcropped.png"
+
 
 
 /**
@@ -39,6 +38,7 @@ export default function Navbar() {
 
     function displayUser() {
         if(user) {
+            console.log(user.roles[1])
             return `Hei! ${user.username}`
         } else {
             return "Din side"

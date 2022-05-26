@@ -17,7 +17,6 @@ const [cartItemData, setCartItemData] = useState({
     date: undefined
 })
 
-
     // Only display add to cart button if all selects are selected
     function displayAddButtonForCorrectValues(){
          if(cartItemData.timeOfDay !== undefined &&
@@ -136,7 +135,6 @@ const [cartItemData, setCartItemData] = useState({
                             <input
                                 className="calendar"
                                 type={"date"}
-                                placeholder={"dato"}
                                 name={"date"}
                                 onChange={handleCartItemChange}
                                 value={cartItemData.date}
@@ -148,8 +146,6 @@ const [cartItemData, setCartItemData] = useState({
                         <p>{cartItemData.duration}</p>
                         <h3 id="productPrice">{cartItemData.price} kr {displayAddButtonForCorrectValues()}</h3>
                     </div>
-
-
 
                 </div>
             </div>
