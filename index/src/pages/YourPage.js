@@ -9,7 +9,6 @@ export default class yourPage extends React.Component {
     render() {
         return(
             <>
-                <Navbar />
                 <DisplayYourPage />
             </>
         )
