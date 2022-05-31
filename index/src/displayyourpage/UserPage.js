@@ -4,7 +4,7 @@ export default function UserPage(props) {
     return(
         <>
             <h1>User page</h1>
-            <button onClick={props.doLogout}></button>
+            <button className={"logoutButton"} onClick={props.doLogout}>Logg ut</button>
         </>
     )
 }

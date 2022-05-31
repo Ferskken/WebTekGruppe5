@@ -49,10 +49,10 @@ div {
 }
 
 .navbar {
-    background-image: url("../pictures/Heartbeatcropped.png");
+    background-image: url("../pictures/heartbeat-removebg-preview.png");
     background-repeat: repeat;
     background-position: center;
-    background-size: 400px;
+    background-size: 300px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -743,4 +743,8 @@ hr{
     cursor: pointer;
     font-size: 16px;
     color: white;
+}
+
+.logoutButton {
+
 }
