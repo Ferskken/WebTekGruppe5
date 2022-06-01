@@ -83,6 +83,7 @@ div {
     font-weight: 500;
     font-size: 1.2rem;
     padding: 0.7rem;
+    margin-left: 30px;
 }
 
 .navbar .nav-container a:hover{
@@ -171,8 +172,6 @@ div {
     transform: translate(-150%);
     display: flex;
     flex-direction: column;
-    margin-left: -40px;
-    padding-left: 50px;
     transition: transform 0.5s ease-in-out;
     text-align: left;
     background-color: whitesmoke;
@@ -184,7 +183,30 @@ div {
     margin-bottom: 3rem;
     font-size: 1.5rem;
     font-weight: 500;
-    margin-left: 20px;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: red;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .logo {
@@ -780,28 +802,4 @@ hr{
     position: absolute;
     top: 50%;
     left: 50%;
-}
-
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    color: red;
-}
-
-.hover-underline-animation:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: red;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
 }
