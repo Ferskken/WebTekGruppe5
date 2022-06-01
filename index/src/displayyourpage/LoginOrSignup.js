@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {sendApiRequest} from "../api/request";
 import {useDispatch, useSelector} from "react-redux";
 import {sendAuthenticationRequest} from "../api/authentication";
@@ -8,7 +8,7 @@ import {setUser} from "../redux/userSlice";
 export default function LoginOrSignup() {
 
     const user = useSelector(state => state.userStore.user)
-
+    const nav = useNavigate();
     const dispatch = useDispatch();
 
     const [signUpFormData, setSignUpFormData] = useState({
@@ -23,7 +23,6 @@ export default function LoginOrSignup() {
     })
     const [message, setMessage] = useState("");
     const [error, setError] = useState("");
-    const nav = useNavigate();
 
     function handleChangeSignUp(event) {
         console.log(signUpFormData)

@@ -42,7 +42,7 @@ export default function ShoppingCart() {
 					<li>Språk: {item.product.language}</li>
 					<li>Gruppestørrelse: {item.product.groupSize} pers</li>
 					<li>Startdato: {item.product.date}</li>
-					<RemoveFromCartButton className="Action" id={item.product.id} buttonText={"Fjern"}/>
+					<RemoveFromCartButton id={item.product.id} buttonText={"Fjern"}/>
 				</ul>
 
 				<hr/>
@@ -70,7 +70,7 @@ export default function ShoppingCart() {
             <div className="cartContainer">
                 <div className="Header">
                    	<h3 className="Heading">Handlekurv</h3>
-					<RemoveFromCartButton className="Action" id={DELETE_ALL} buttonText={"Fjern alt"}/>
+					<RemoveFromCartButton id={DELETE_ALL} buttonText={"Fjern alt"}/>
                 </div>
 
 				{cartItems}

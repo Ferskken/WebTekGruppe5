@@ -6,14 +6,15 @@ import {FAKE_PRODUCTS} from "./FakeData";
 import {useDispatch, useSelector} from "react-redux";
 import {setProducts} from "./redux/productSlice";
 import {sendApiRequest} from "./api/request";
-import {deleteAuthorizationCookies} from "./api/authentication";
+import {deleteAuthorizationCookies, getAuthenticatedUser} from "./api/authentication";
+import {getCookie} from "./api/cookies";
 
 export default function App() {
 
     const dispatch = useDispatch();
 
     useEffect(() => {
-            deleteAuthorizationCookies()
+
             loadRealProducts()
     },[]);
 

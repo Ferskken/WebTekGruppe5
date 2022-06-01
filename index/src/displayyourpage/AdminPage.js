@@ -9,7 +9,7 @@ export default function AdminPage(props) {
     return(
         <>
             <div>
-                <button className={"logoutButton"} onClick={props.doLogout}>Logg ut</button>
+                <button className={"logoutButton"} onClick={props.doLogout}>Logg ut Admin</button>
             </div>
         </>
     )

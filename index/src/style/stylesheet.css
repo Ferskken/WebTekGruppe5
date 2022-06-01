@@ -420,11 +420,14 @@ div {
     padding: 20px;
     border: 1px solid;
     border-radius: 20px;
+    transition: 0.1s;
 
 }
 
 .article_intro:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    transition: 0.1s;
+
 }
 
 .article_image {
@@ -465,19 +468,22 @@ div {
 }
 
 .articleBtn {
+    color: white;
+    font-weight: bold;
     font-size: 20px;
     width: 150px;
     height: 35px;
     float: right;
-    background-color: whitesmoke;
+    background-color: black;
     border: 0.1px solid;
     border-radius: 25px;
+    transition: 0.1s;
 }
 
 .articleBtn:hover {
-    font-weight: bolder;
-    color: green;
-    transform: scale(1.1);
+    background: gray;
+    transform: scale(1.05);
+    transition: 0.1s;
 }
 
 
@@ -640,13 +646,17 @@ input{
     color: #2F3841;
 }
 
-.Action{
+.removeButton{
     background-color: transparent;
     font-size: 17px;
     font-weight: 600;
     color: #E44C4C;
     cursor: pointer;
     border: none;
+}
+
+.removeButton:hover {
+    text-decoration: underline;
 }
 
 .Cart-Items{
@@ -766,5 +776,32 @@ hr{
 }
 
 .logoutButton {
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
 
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: red;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }

@@ -24,7 +24,7 @@ export function RemoveFromCartButton(props) {
 
 
     return (
-        <button className="Action" onClick={actionFunction}>{props.buttonText}</button>
+        <button className="removeButton" onClick={actionFunction}>{props.buttonText}</button>
     )
 }
 //Used to determine which button was clicked in shopping cart

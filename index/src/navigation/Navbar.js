@@ -4,6 +4,8 @@ import {Route, Routes} from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
 import {ActiveLink} from "./ActiveLink";
 import {useSelector} from "react-redux";
+import {getAuthenticatedUser} from "../api/authentication";
+import {getCookie} from "../api/cookies";
 
 
 
@@ -37,8 +39,8 @@ export default function Navbar() {
     }
 
     function displayUser() {
-        if(user) {
-            return `Hei! ${user.username}`
+        if(getAuthenticatedUser()) {
+            return `Hei! ${getCookie("current_username")}`
         } else {
             return "Din side"
         }
@@ -59,10 +61,10 @@ export default function Navbar() {
                         <img id="logoNav" src={require("../pictures/rk.jpg")} alt={"rodeKors"}/>
                     </div>
                      <ul className="menu-items" id={"menuList"}>
-                        <li><ActiveLink to="/">Hjem</ActiveLink></li>
-                        <li><ActiveLink to="/produkter">Produkter</ActiveLink></li>
-                        <li><ActiveLink to="/handlekurv">{displayCart()}</ActiveLink></li>
-                        <li><ActiveLink to="/dinside">{displayUser()}</ActiveLink></li>
+                        <li className={"hover-underline-animation"}><ActiveLink to="/">Hjem</ActiveLink></li>
+                        <li className={"hover-underline-animation"}><ActiveLink to="/produkter">Produkter</ActiveLink></li>
+                        <li className={"hover-underline-animation"}><ActiveLink to="/handlekurv">{displayCart()}</ActiveLink></li>
+                        <li className={"hover-underline-animation"}><ActiveLink to="/dinside">{displayUser()}</ActiveLink></li>
                     </ul>
              </div>
             </div>

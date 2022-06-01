@@ -8,7 +8,7 @@ import {deleteCookie, getCookie, setCookie} from "./cookies";
  * @returns User object or null if user is not authenticated
  */
 export function getAuthenticatedUser() {
-    let user = null;
+    let user = undefined;
     const username = getCookie("current_username");
     const commaSeparatedRoles = getCookie("current_user_roles");
     if (username && commaSeparatedRoles) {
