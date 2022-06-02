@@ -553,7 +553,7 @@ div {
     transition: 0.1s;
 }
 
-.prodCommentSection {
+#prodCommentSection {
     display: none;
     width: 90%;
     margin-left: auto;
@@ -574,7 +574,7 @@ div {
     padding: 10px;
 }
 
-.addProdComment {
+#addProdComment {
     display: none;
     width: 95%;
     padding: 10px;

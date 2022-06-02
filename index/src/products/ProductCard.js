@@ -42,6 +42,23 @@ export default function ProductCard(props) {
         })
     }
 
+    function showReviews() {
+        if(document.getElementById("addProdComment").style.display === "block") {
+            document.getElementById("addProdComment").style.display = "none";
+        } else {
+            document.getElementById("addProdComment").style.display = "block"
+        }
+
+    }
+
+    function showAddReviewSection() {
+        if(document.getElementById("prodCommentSection").style.display === "block") {
+            document.getElementById("prodCommentSection").style.display = "none";
+        } else {
+            document.getElementById("prodCommentSection").style.display = "block"
+        }
+    }
+
     //Displays the correct price depending on the group size
     function handlePrice() {
 
@@ -163,15 +180,15 @@ export default function ProductCard(props) {
             </div>
 
             <div className="reviewButtons">
-            <button id="readCourseReviewBtn">Les kommentarer</button>
-            <button id="addCourseReviewBtn">Legg til kommentar</button>
+            <button id="readCourseReviewBtn" onClick={showReviews}>Les kommentarer</button>
+            <button id="addCourseReviewBtn" onClick={showAddReviewSection}>Legg til kommentar</button>
             </div>
 
-            <div className="prodCommentSection">
+            <div id="prodCommentSection">
             {reviewElements}
             </div>
 
-            <div className="addProdComment">
+            <div id="addProdComment">
             <p>Skriv en tilbakemelding til oss!</p>
             <input className="reviewTextField" type="text"></input>
             <select className="ratingDrop">
