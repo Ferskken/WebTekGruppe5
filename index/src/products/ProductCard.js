@@ -180,8 +180,8 @@ export default function ProductCard(props) {
             </div>
 
             <div className="reviewButtons">
-            <button id="readCourseReviewBtn" onClick={showReviews}>Les kommentarer</button>
-            <button id="addCourseReviewBtn" onClick={showAddReviewSection}>Legg til kommentar</button>
+            <button id="readCourseReviewBtn" onClick={showAddReviewSection}>Les kommentarer</button>
+            <button id="addCourseReviewBtn" onClick={showReviews}>Legg til kommentar</button>
             </div>
 
             <div id="prodCommentSection">
