@@ -89,19 +89,6 @@ export default function ProductCard(props) {
             }}
            )
 
-
-
-/*
-    function showReview() {
-        var x = document.getElementById("firstProdRev");
-          if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          }
-    }
-*/
-
     return (
 
         <article className="articles">

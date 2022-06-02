@@ -437,11 +437,10 @@ div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 500px;
     width: 90%;
     min-width: 900px;
     transition: transform .3s;
-    margin-bottom: 200px;
+    margin-bottom: 70px;
 }
 
 .article_intro {
@@ -527,15 +526,23 @@ div {
     transition: 0.1s;
 }
 
-.productReview {
+.prodCommentSection {
     width: 90%;
-    margin-right: auto;
     margin-left: auto;
-    border: 1px solid;
-    border-radius: 20px;
-    padding: 7px;
-    display: none;  /* hide review */
+    margin-right: auto;
+}
 
+.prodCommentText {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+.prodRating {
+    float: right;
+    padding: 10px;
 }
 
 

@@ -7,10 +7,10 @@ export default function ProductReview(props) {
     return (
 
         <>
-            <div>
-                <div className="commentBox">
+            <div className="prodCommentSection">
+                <div className="prodCommentBox">
 
-                    <div className="commentText">
+                    <div className="prodCommentText">
                                     <span className="text1">{props.review.reviewText}</span>
 
                         <div className="commentInfo">
@@ -18,7 +18,7 @@ export default function ProductReview(props) {
                             <div className="commentProfile">
                                 <img className="profilePicture" src={profilePicture} alt="randomProfilePic"/>
                                 <span className="text2">{props.review.reviewUserName}</span>
-                                <div>{props.review.rating} / 5</div>
+                                <div className="prodRating">{props.review.rating} / 5</div>
                             </div>
 
                         </div>
