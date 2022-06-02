@@ -160,7 +160,7 @@ const [cartItemData, setCartItemData] = useState({
                 </div>
             </div>
 
-            <button className="courseReview" onClick={"showReview()"}>Les kommentarer her</button>
+            <button className="courseReview" >Les kommentarer her</button>
 
                  <div className="productReview" id="firstProdRev">
 

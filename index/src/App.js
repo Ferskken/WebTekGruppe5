@@ -8,14 +8,18 @@ import {setProducts} from "./redux/productSlice";
 import {sendApiRequest} from "./api/request";
 import {deleteAuthorizationCookies, getAuthenticatedUser} from "./api/authentication";
 import {getCookie} from "./api/cookies";
+import {setReviews} from "./redux/reviewSlice";
 
 export default function App() {
+
+    const reviews = useSelector(state => state.reviewStore.reviews)
 
     const dispatch = useDispatch();
 
     useEffect(() => {
-
             loadRealProducts()
+            loadReviews()
+        console.log(reviews)
     },[]);
 
    function loadRealProducts() {
@@ -25,6 +29,11 @@ export default function App() {
     function setFakeProducts() {
         dispatch(setProducts(FAKE_PRODUCTS))
     };
+
+
+    function loadReviews() {
+        sendApiRequest("GET", "/api/reviews", function(reviews) {dispatch(setReviews(reviews));})
+    }
 
   return (
               <Router>
