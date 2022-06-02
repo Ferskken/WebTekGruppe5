@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Review() {
     return(
-                      <div id={"reviewBox"}>
+                      <div className={"reviewBox"}>
 
                           <div className="addNote"><input type="text" name="text" placeholder="+ Legg til kommentar" className="addTxt"/></div>
                           <button className="addCommentBtn">Legg til</button>

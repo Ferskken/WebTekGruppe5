@@ -332,7 +332,7 @@ div {
 
 /** Review section */
 
-#reviewBox {
+.reviewBox {
     margin-top: 200px;
     margin-bottom: 200px;
 }
@@ -378,6 +378,9 @@ div {
 }
 
 .commentProfile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 5px;
 }
 

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import AddToCartButton from "../shoppingCart/AddToCartButton";
 import {useSelector} from "react-redux";
+import ProductReview from "./ProductReview";
 
 export default function ProductCard(props) {
 
@@ -158,24 +159,11 @@ const [cartItemData, setCartItemData] = useState({
                     </div>
 
                 </div>
+
             </div>
 
             <button className="courseReview" >Les kommentarer her</button>
 
-                 <div className="productReview" id="firstProdRev">
-
-                    <span className="text1">
-                        Red Cross are very competent experts in first help. They are so effective; you never
-                        need the second help.
-                    </span>
-
-                    <div className="commentInfo">
-                        <div className="commentProfile">
-                            <span className="text2">Billy Eirish</span>
-                        </div>
-                    </div>
-
-                 </div>
 
         </article>
     )

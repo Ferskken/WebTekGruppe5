@@ -4,6 +4,7 @@ import Navbar from "../navigation/Navbar";
 import Review from "../reviews/Review";
 import ProductCard from "../products/ProductCard";
 import CoreValues from "../coreValues/coreValues";
+import ProductReview from "../products/ProductReview";
 
 export default class LandingPage extends React.Component {
     render() {
