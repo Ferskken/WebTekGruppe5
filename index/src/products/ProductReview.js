@@ -7,7 +7,6 @@ export default function ProductReview(props) {
     return (
 
         <>
-            <div className="prodCommentSection">
                 <div className="prodCommentBox">
 
                     <div className="prodCommentText">
@@ -26,7 +25,6 @@ export default function ProductReview(props) {
                     </div>
 
                 </div>
-            </div>
         </>
 
 

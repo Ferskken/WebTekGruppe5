@@ -337,6 +337,10 @@ div {
     margin-bottom: 200px;
 }
 
+.addNote {
+    margin-top: 200px;
+}
+
 .addTxt {
     width: 100%;
     padding-top: 30px;
@@ -509,32 +513,57 @@ div {
     transition: 0.1s;
 }
 
-.courseReview {
-    width: 90%;
+
+.reviewButtons {
+    margin-top: 40px;
+}
+
+#readCourseReviewBtn {
+    margin-left: 40px;
+    width: 45%;
     border-radius: 20px;
-    margin: 20px auto;
+    padding: 5px;
+    font-size: 20px;
+    float: left;
+    background-color: whitesmoke;
+    transition: 0.1s;
+}
+
+#readCourseReviewBtn:hover {
+    background: lightgray;
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+#addCourseReviewBtn {
+    margin-right: 40px;
+    width: 45%;
+    border-radius: 20px;
     padding: 5px;
     font-size: 20px;
     float: right;
     background-color: whitesmoke;
     transition: 0.1s;
+
 }
 
-.courseReview:hover {
+#addCourseReviewBtn:hover {
     background: lightgray;
     transform: scale(1.05);
     transition: 0.1s;
 }
 
 .prodCommentSection {
+    display: none;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
 }
 
 .prodCommentText {
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: whitesmoke;
     border-radius: 20px;
     border: 1px solid;
@@ -543,6 +572,24 @@ div {
 .prodRating {
     float: right;
     padding: 10px;
+}
+
+.addProdComment {
+    display: none;
+    width: 90%;
+    padding: 10px;
+    margin: 50px auto 10px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+.reviewTextField {
+    float: left;
+}
+
+#sendCommentBtn {
+    float: right;
 }
 
 

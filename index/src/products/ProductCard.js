@@ -89,6 +89,10 @@ export default function ProductCard(props) {
             }}
            )
 
+
+
+
+
     return (
 
         <article className="articles">
@@ -161,9 +165,19 @@ export default function ProductCard(props) {
 
             </div>
 
-            <button className="courseReview" >Les kommentarer her</button>
+            <div className="reviewButtons">
+            <button id="readCourseReviewBtn">Les kommentarer</button>
+            <button id="addCourseReviewBtn">Legg til kommentar</button>
+            </div>
 
+            <div className="prodCommentSection">
             {reviewElements}
+            </div>
+
+            <div className="addProdComment">
+            <input className="reviewTextField" type="text"></input>
+            <button id="sendCommentBtn"></button>
+            </div>
 
         </article>
     )
