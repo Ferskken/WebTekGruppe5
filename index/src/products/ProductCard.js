@@ -78,6 +78,16 @@ const [cartItemData, setCartItemData] = useState({
         }
     }
 
+/*
+    function showReview() {
+        var x = document.getElementById("firstProdRev");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+    }
+*/
 
     return (
 
@@ -149,6 +159,24 @@ const [cartItemData, setCartItemData] = useState({
 
                 </div>
             </div>
+
+            <button className="courseReview" onClick={"showReview()"}>Les kommentarer her</button>
+
+                 <div className="productReview" id="firstProdRev">
+
+                    <span className="text1">
+                        Red Cross are very competent experts in first help. They are so effective; you never
+                        need the second help.
+                    </span>
+
+                    <div className="commentInfo">
+                        <div className="commentProfile">
+                            <span className="text2">Billy Eirish</span>
+                        </div>
+                    </div>
+
+                 </div>
+
         </article>
     )
 }          
