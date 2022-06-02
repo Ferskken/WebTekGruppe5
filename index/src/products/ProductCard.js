@@ -5,18 +5,21 @@ import ProductReview from "./ProductReview";
 
 export default function ProductCard(props) {
 
-// State to store the current data of the product
-const [cartItemData, setCartItemData] = useState({
-    id: props.product.id,
-    title: props.product.title,
-    description: props.product.description,
-    duration: props.product.duration,
-    price: props.product.price,
-    timeOfDay: undefined,
-    language: undefined,
-    groupSize: undefined,
-    date: undefined
-})
+    //Array of reviews
+    const reviews = useSelector(state => state.reviewStore.reviews)
+
+    // State to store the current data of the product
+    const [cartItemData, setCartItemData] = useState({
+        id: props.product.id,
+        title: props.product.title,
+        description: props.product.description,
+        duration: props.product.duration,
+        price: props.product.price,
+        timeOfDay: undefined,
+        language: undefined,
+        groupSize: undefined,
+        date: undefined
+    })
 
     // Only display add to cart button if all selects are selected
     function displayAddButtonForCorrectValues(){
@@ -78,6 +81,15 @@ const [cartItemData, setCartItemData] = useState({
             })
         }
     }
+
+
+        const reviewElements = reviews.map(review => {
+            if(review.productId === props.product.id){
+                return  <ProductReview review={review} key={review.id}/>
+            }}
+           )
+
+
 
 /*
     function showReview() {
@@ -164,6 +176,7 @@ const [cartItemData, setCartItemData] = useState({
 
             <button className="courseReview" >Les kommentarer her</button>
 
+            {reviewElements}
 
         </article>
     )

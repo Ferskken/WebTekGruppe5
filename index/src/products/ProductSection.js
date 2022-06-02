@@ -11,24 +11,23 @@ export default function ProductSection() {
     const productElements = products.map(product => (
             <ProductCard
                 product={product}
-
                 key={product.id}
             />
         )
+
     )
 
-    const reviewElements = reviews.map(review => (
-        <ProductReview
-            review={review}
-
-            key={review.id}
-        />
-    ))
+    // const reviewElements = reviews.map(review => (
+    //     <ProductReview
+    //         review={review}
+    //
+    //         key={review.id}
+    //     />
+    // ))
 
     return (
         <div className="offerRow">
             {productElements}
-            {reviewElements}
         </div>
     )
 }
