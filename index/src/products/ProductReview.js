@@ -7,10 +7,11 @@ export default function ProductReview(props) {
     return (
 
         <>
+
                 <div className="prodCommentBox">
 
                     <div className="prodCommentText">
-                                    <span className="text1">{props.review.reviewText}</span>
+                        <span className="text1">{props.review.reviewText}</span>
 
                         <div className="commentInfo">
 

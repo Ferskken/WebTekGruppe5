@@ -8,6 +8,10 @@ export default function ProductCard(props) {
     //Array of reviews
     const reviews = useSelector(state => state.reviewStore.reviews)
 
+    const [areReviewsShown, setAreReviewsShown] = useState(false)
+
+    const [isAddReviewSectionShown, setIsAddReviewSectionShown] = useState(false)
+
     // State to store the current data of the product
     const [cartItemData, setCartItemData] = useState({
         id: props.product.id,
@@ -42,21 +46,12 @@ export default function ProductCard(props) {
         })
     }
 
-    function showReviews() {
-        if(document.getElementById("addProdComment").style.display === "block") {
-            document.getElementById("addProdComment").style.display = "none";
-        } else {
-            document.getElementById("addProdComment").style.display = "block"
-        }
-
+    function toggleShowReviews() {
+        return setAreReviewsShown(!areReviewsShown)
     }
 
-    function showAddReviewSection() {
-        if(document.getElementById("prodCommentSection").style.display === "block") {
-            document.getElementById("prodCommentSection").style.display = "none";
-        } else {
-            document.getElementById("prodCommentSection").style.display = "block"
-        }
+    function toggleShowAddReviewSection() {
+        return setIsAddReviewSectionShown(!isAddReviewSectionShown)
     }
 
     //Displays the correct price depending on the group size
@@ -180,26 +175,27 @@ export default function ProductCard(props) {
             </div>
 
             <div className="reviewButtons">
-            <button id="readCourseReviewBtn" onClick={showAddReviewSection}>Les kommentarer</button>
-            <button id="addCourseReviewBtn" onClick={showReviews}>Legg til kommentar</button>
+            <button id="readCourseReviewBtn" onClick={toggleShowReviews}>Les kommentarer</button>
+            <button id="addCourseReviewBtn" onClick={toggleShowAddReviewSection}>Legg til kommentar</button>
             </div>
 
-            <div id="prodCommentSection">
-            {reviewElements}
-            </div>
+            {areReviewsShown && <div id="prodCommentSection">{reviewElements}</div>}
 
-            <div id="addProdComment">
-            <p>Skriv en tilbakemelding til oss!</p>
-            <input className="reviewTextField" type="text"></input>
-            <select className="ratingDrop">
-                <option value="1">{"1/5"}</option>
-                <option value="2">{"2/5"}</option>
-                <option value="3">{"3/5"}</option>
-                <option value="4">{"4/5"}</option>
-                <option value="5">{"5/5"}</option>
-            </select>
-            <button id="sendCommentBtn">Send inn</button>
-            </div>
+            {isAddReviewSectionShown &&
+                <div id="addProdComment">
+                <p>Skriv en tilbakemelding til oss!</p>
+                <input className="reviewTextField" type="text"></input>
+                <select className="ratingDrop">
+                    <option value="1">{"1/5"}</option>
+                    <option value="2">{"2/5"}</option>
+                    <option value="3">{"3/5"}</option>
+                    <option value="4">{"4/5"}</option>
+                    <option value="5">{"5/5"}</option>
+                </select>
+                <button id="sendCommentBtn">Send inn</button>
+            </div>}
+
+
 
         </article>
     )

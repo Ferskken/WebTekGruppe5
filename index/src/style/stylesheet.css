@@ -554,7 +554,6 @@ div {
 }
 
 #prodCommentSection {
-    display: none;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -575,7 +574,6 @@ div {
 }
 
 #addProdComment {
-    display: none;
     width: 95%;
     padding: 10px;
     margin: 50px auto 10px;
