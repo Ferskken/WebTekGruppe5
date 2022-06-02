@@ -90,9 +90,6 @@ export default function ProductCard(props) {
            )
 
 
-
-
-
     return (
 
         <article className="articles">
@@ -175,8 +172,16 @@ export default function ProductCard(props) {
             </div>
 
             <div className="addProdComment">
+            <p>Skriv en tilbakemelding til oss!</p>
             <input className="reviewTextField" type="text"></input>
-            <button id="sendCommentBtn"></button>
+            <select className="ratingDrop">
+                <option value="1">{"1/5"}</option>
+                <option value="2">{"2/5"}</option>
+                <option value="3">{"3/5"}</option>
+                <option value="4">{"4/5"}</option>
+                <option value="5">{"5/5"}</option>
+            </select>
+            <button id="sendCommentBtn">Send inn</button>
             </div>
 
         </article>
