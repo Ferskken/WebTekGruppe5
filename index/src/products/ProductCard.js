@@ -2,15 +2,9 @@ import React, {useState} from "react";
 import AddToCartButton from "../shoppingCart/AddToCartButton";
 import {useSelector} from "react-redux";
 import ProductReview from "./ProductReview";
+import ReviewSection from "./ReviewSection";
 
 export default function ProductCard(props) {
-
-    //Array of reviews
-    const reviews = useSelector(state => state.reviewStore.reviews)
-
-    const [areReviewsShown, setAreReviewsShown] = useState(false)
-
-    const [isAddReviewSectionShown, setIsAddReviewSectionShown] = useState(false)
 
     // State to store the current data of the product
     const [cartItemData, setCartItemData] = useState({
@@ -44,14 +38,6 @@ export default function ProductCard(props) {
                 [name]: value,
             }
         })
-    }
-
-    function toggleShowReviews() {
-        return setAreReviewsShown(!areReviewsShown)
-    }
-
-    function toggleShowAddReviewSection() {
-        return setIsAddReviewSectionShown(!isAddReviewSectionShown)
     }
 
     //Displays the correct price depending on the group size
@@ -93,14 +79,6 @@ export default function ProductCard(props) {
             })
         }
     }
-
-
-        const reviewElements = reviews.map(review => {
-            if(review.productId === props.product.id){
-                return  <ProductReview review={review} key={review.id}/>
-            }}
-           )
-
 
     return (
 
@@ -174,28 +152,9 @@ export default function ProductCard(props) {
 
             </div>
 
-            <div className="reviewButtons">
-            <button id="readCourseReviewBtn" onClick={toggleShowReviews}>Les kommentarer</button>
-            <button id="addCourseReviewBtn" onClick={toggleShowAddReviewSection}>Legg til kommentar</button>
-            </div>
-
-            {areReviewsShown && <div id="prodCommentSection">{reviewElements}</div>}
-
-            {isAddReviewSectionShown &&
-                <div id="addProdComment">
-                <p>Skriv en tilbakemelding til oss!</p>
-                <input className="reviewTextField" type="text"></input>
-                <select className="ratingDrop">
-                    <option value="1">{"1/5"}</option>
-                    <option value="2">{"2/5"}</option>
-                    <option value="3">{"3/5"}</option>
-                    <option value="4">{"4/5"}</option>
-                    <option value="5">{"5/5"}</option>
-                </select>
-                <button id="sendCommentBtn">Send inn</button>
-            </div>}
-
-
+            <ReviewSection
+                productId={props.product.id}
+            />
 
         </article>
     )
