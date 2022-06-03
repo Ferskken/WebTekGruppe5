@@ -63,12 +63,12 @@ export default function ReviewSection(props) {
         <>
             <div className="reviewButtons">
                 <button id="readCourseReviewBtn" onClick={toggleShowReviews}>Les kommentarer</button>
-                <button id="addCourseReviewBtn" onClick={toggleShowAddReviewSection}>Legg til kommentar</button>
+                {user && <button id="addCourseReviewBtn" onClick={toggleShowAddReviewSection}>Legg til kommentar</button>}
             </div>
 
             {areReviewsShown && <div id="prodCommentSection">{reviewElements}</div>}
 
-            {(isAddReviewSectionShown && user) &&
+            {isAddReviewSectionShown &&
                 <div id="addProdComment">
                     <p>Skriv en tilbakemelding til oss!</p>
                     <input className="reviewTextField"

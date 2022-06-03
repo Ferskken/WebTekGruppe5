@@ -1,6 +1,6 @@
 import React from "react"
-import {useSelector} from "react-redux";
 import profilePicture from "../pictures/default-avatar.png"
+import heartbeat from "../pictures/NHpG.gif"
 
 export default function ProductReview(props) {
 

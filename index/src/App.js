@@ -12,6 +12,7 @@ import {setReviews} from "./redux/reviewSlice";
 
 export default function App() {
 
+    const user = useSelector(state => state.userStore.user)
     const reviews = useSelector(state => state.reviewStore.reviews)
 
     const dispatch = useDispatch();
@@ -32,6 +33,10 @@ export default function App() {
 
     function loadReviews() {
         sendApiRequest("GET", "/api/reviews", function(reviews) {dispatch(setReviews(reviews));})
+    }
+
+    function restoreUserAtRefresh() {
+
     }
 
   return (
