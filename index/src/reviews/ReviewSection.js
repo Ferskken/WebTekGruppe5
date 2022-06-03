@@ -14,12 +14,18 @@ export default function ReviewSection(props) {
     const [error, setError] = useState("");
     const nav = useNavigate();
 
+    const [numberOfReviews, setNumberOfReviews] = useState(loadNumberOfReviews)
+
     const [reviewFormData, setReviewFormData] = useState({
         productId: props.productId,
         reviewUserName: getCookie("current_username"),
         reviewText: undefined,
         rating: undefined
     })
+
+    function loadNumberOfReviews() {
+        sendApiRequest("GET", "/api/review/" + props.productId, function (numberOfReviews) {setNumberOfReviews(numberOfReviews)} )
+    }
 
     function handleReviewChange(event) {
         const {name, value} = event.target
@@ -62,7 +68,7 @@ export default function ReviewSection(props) {
     return (
         <>
             <div className="reviewButtons">
-                <button id="readCourseReviewBtn" onClick={toggleShowReviews}>Les kommentarer</button>
+                <button id="readCourseReviewBtn" onClick={toggleShowReviews}>{`Les kommentarer (${numberOfReviews})`}</button>
                 {user && <button id="addCourseReviewBtn" onClick={toggleShowAddReviewSection}>Legg til kommentar</button>}
             </div>
 

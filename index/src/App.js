@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useEffect} from "react";
 import Navbar from "./navigation/Navbar";
 import {MainSection} from "./MainSection";
 import {BrowserRouter as Router} from "react-router-dom";
@@ -6,9 +6,10 @@ import {FAKE_PRODUCTS} from "./FakeData";
 import {useDispatch, useSelector} from "react-redux";
 import {setProducts} from "./redux/productSlice";
 import {sendApiRequest} from "./api/request";
-import {deleteAuthorizationCookies, getAuthenticatedUser} from "./api/authentication";
+import {deleteAuthorizationCookies, getAuthenticatedUser, parseJwtUser} from "./api/authentication";
 import {getCookie} from "./api/cookies";
 import {setReviews} from "./redux/reviewSlice";
+import {setUser} from "./redux/userSlice";
 
 export default function App() {
 
@@ -18,6 +19,7 @@ export default function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
+            restoreUserAtRefreshIfLoggedIn()
             loadRealProducts()
             loadReviews()
     },[]);
@@ -35,8 +37,10 @@ export default function App() {
         sendApiRequest("GET", "/api/reviews", function(reviews) {dispatch(setReviews(reviews));})
     }
 
-    function restoreUserAtRefresh() {
-
+    function restoreUserAtRefreshIfLoggedIn() {
+        if(getCookie("jwt")) {
+            dispatch(setUser(parseJwtUser(getCookie("jwt"))))
+        }
     }
 
   return (

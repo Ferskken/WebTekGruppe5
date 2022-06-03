@@ -1,6 +1,5 @@
 import React from "react"
 import profilePicture from "../pictures/default-avatar.png"
-import heartbeat from "../pictures/NHpG.gif"
 
 export default function ProductReview(props) {
 

@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {sendAuthenticationRequest} from "../api/authentication";
 import {setUser} from "../redux/userSlice";
 
+
 export default function LoginOrSignup() {
 
     const user = useSelector(state => state.userStore.user)
@@ -25,7 +26,6 @@ export default function LoginOrSignup() {
     const [error, setError] = useState("");
 
     function handleChangeSignUp(event) {
-        console.log(signUpFormData)
         const {name, value} = event.target
         setSignUpFormData(prevFormData => ({
             ...prevFormData,
@@ -34,7 +34,6 @@ export default function LoginOrSignup() {
     }
 
     function handleChangeLogin(event) {
-        console.log(loginFormData)
         const {name, value} = event.target
         setLoginFormData(prevFormData => ({
             ...prevFormData,

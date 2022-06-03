@@ -1,8 +1,6 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {unsetUser} from "../redux/userSlice";
-import {getAuthenticatedUser} from "../api/authentication";
-import {getCookie} from "../api/cookies";
+
 
 export default function AdminPage(props) {
 

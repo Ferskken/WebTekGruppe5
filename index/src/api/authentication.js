@@ -81,7 +81,7 @@ function parseJwt(token) {
  * @param jwtString
  * @return User object
  */
-function parseJwtUser(jwtString) {
+export function parseJwtUser(jwtString) {
     let user = null;
     const jwtObject = parseJwt(jwtString);
     if (jwtObject) {

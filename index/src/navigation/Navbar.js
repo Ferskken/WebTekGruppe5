@@ -1,7 +1,5 @@
-import React, {useEffect} from "react";
-import YourPage from "../pages/YourPage"
-import {Route, Routes} from "react-router-dom";
-import LandingPage from "../pages/LandingPage";
+import React from "react";
+
 import {ActiveLink} from "./ActiveLink";
 import {useSelector} from "react-redux";
 import {getAuthenticatedUser} from "../api/authentication";

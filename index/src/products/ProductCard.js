@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 import AddToCartButton from "../shoppingCart/AddToCartButton";
-import {useSelector} from "react-redux";
-import ProductReview from "../reviews/ProductReview";
 import ReviewSection from "../reviews/ReviewSection";
 
 export default function ProductCard(props) {
