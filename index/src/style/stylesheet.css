@@ -983,18 +983,17 @@ hr{
 }
 
 .mainSectionFooter {
-    width: 50%;
+    width: 570px;
     margin-left: auto;
     margin-right: auto;
+    justify-content: space-evenly;
 
 }
 
 .relatedCompanies {
     display: inline-block;
     height: 190px;
-    width: 190px;
     margin-right: auto;
-    margin-left: 50px;
     padding: 20px;
 }
 
@@ -1010,7 +1009,7 @@ hr{
 }
 
 .socialMediaBox {
-    width: 20%;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
