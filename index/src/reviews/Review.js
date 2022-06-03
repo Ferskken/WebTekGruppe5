@@ -4,6 +4,7 @@ export default function Review() {
     return(
                       <div className={"reviewBox"}>
 
+                        <h3 className="titleh3">Les kommentarer fra noen av våre medlemmer og tidligere kursdeltagere.</h3>
 
                             <div className="commentBox">
 
