@@ -4,6 +4,7 @@ import Review from "../reviews/Review";
 import CoreValues from "../coreValues/coreValues";
 import ProductReview from "../reviews/ProductReview";
 import Contact from "../contacts/contact";
+import Footer from "../footer/Footer";
 
 
 export default class LandingPage extends React.Component {
@@ -77,6 +78,8 @@ export default class LandingPage extends React.Component {
               <Review />
 
           </main>
+
+          <Footer />
       </>
         )
       }
