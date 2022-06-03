@@ -8,7 +8,7 @@ export default function CoreValues() {
             <div className="coreValues">
 
                           <div id="coreValuesDrop" className="coreValuesContent">
-                              <h3>Kjerneverdier.</h3>
+                              <p className="paragraphTitles">Kjerneverdier.</p>
                               <br/>
                               <br/>
 

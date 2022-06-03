@@ -6,7 +6,7 @@ export default function Contact() {
   <>
       <section className={"contactsBox"}>
 
-      <h3>Kontakt vårt personell direkte.</h3>
+      <p className="paragraphTitles">Kontakt vårt personell direkte.</p>
       <br/>
 
             <article className={"contact"}>

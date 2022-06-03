@@ -29,7 +29,7 @@ export default class LandingPage extends React.Component {
                   </p>
 
                       <div className="destBox">
-                          <h3>Hvordan nå oss?</h3>
+                          <p className="paragraphTitles">Hvordan nå oss?</p>
                           <br />
                           {/* eslint-disable-next-line jsx-a11y/iframe-has-title */}
                           <iframe id="map"
@@ -39,7 +39,7 @@ export default class LandingPage extends React.Component {
                           />
 
                       <div className="destBox2">
-                          <h3>Litt informasjon om oss:</h3>
+                          <p className="paragraphTitles">Litt informasjon om oss:</p>
                           <br/>
 
                           <h4>Adresse:</h4>
