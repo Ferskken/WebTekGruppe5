@@ -22,7 +22,6 @@ export default function ReviewSection(props) {
     })
 
     function handleReviewChange(event) {
-        console.log(reviewFormData)
         const {name, value} = event.target
         setReviewFormData(prevReviewFormData => {
             return {
@@ -69,7 +68,7 @@ export default function ReviewSection(props) {
 
             {areReviewsShown && <div id="prodCommentSection">{reviewElements}</div>}
 
-            {isAddReviewSectionShown &&
+            {(isAddReviewSectionShown && user) &&
                 <div id="addProdComment">
                     <p>Skriv en tilbakemelding til oss!</p>
                     <input className="reviewTextField"
@@ -84,6 +83,7 @@ export default function ReviewSection(props) {
                             name={"rating"}
                             onChange={handleReviewChange}
                             >
+                        <option value="hide">{"Din vurdering"}</option>
                         <option value="1">{"1/5"}</option>
                         <option value="2">{"2/5"}</option>
                         <option value="3">{"3/5"}</option>

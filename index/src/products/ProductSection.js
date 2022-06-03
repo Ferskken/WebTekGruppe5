@@ -1,6 +1,6 @@
 import ProductCard from "./ProductCard";
 import {useSelector} from "react-redux";
-import ProductReview from "./ProductReview";
+import ProductReview from "../reviews/ProductReview";
 
 export default function ProductSection() {
 

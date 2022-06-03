@@ -19,7 +19,6 @@ export default function App() {
     useEffect(() => {
             loadRealProducts()
             loadReviews()
-        console.log(reviews)
     },[]);
 
    function loadRealProducts() {

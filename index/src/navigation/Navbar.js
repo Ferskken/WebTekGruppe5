@@ -6,7 +6,7 @@ import {ActiveLink} from "./ActiveLink";
 import {useSelector} from "react-redux";
 import {getAuthenticatedUser} from "../api/authentication";
 import {getCookie} from "../api/cookies";
-
+import {useNavigate} from "react-router-dom";
 
 
 /**
@@ -15,9 +15,11 @@ import {getCookie} from "../api/cookies";
  * @constructor
  */
 export default function Navbar() {
+
+
     const cart = useSelector(state => state.cartStore.cart)
     const user = useSelector(state => state.userStore.user)
-
+    const nav = useNavigate();
     //Gets the total amount of products in the cart
     function getItemCount () {
         let totalProducts = 0;
@@ -58,7 +60,7 @@ export default function Navbar() {
                     </div>
 
                     <div className="logo">
-                        <img id="logoNav" src={require("../pictures/rk.jpg")} alt={"rodeKors"}/>
+                        <img onClick={() => nav("/")} id="logoNav" src={require("../pictures/rk.jpg")} alt={"rodeKors"}/>
                     </div>
                      <ul className="menu-items" id={"menuList"}>
                         <li className={"hover-underline-animation"}><ActiveLink to="/">Hjem</ActiveLink></li>
