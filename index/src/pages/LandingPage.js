@@ -2,6 +2,8 @@ import React from 'react';
 import "../style/stylesheet.css";
 import Review from "../reviews/Review";
 import CoreValues from "../coreValues/coreValues";
+import ProductReview from "../reviews/ProductReview";
+import Contact from "../contacts/contact";
 
 
 export default class LandingPage extends React.Component {
@@ -69,6 +71,8 @@ export default class LandingPage extends React.Component {
                  <CoreValues />
 
           </div>
+
+              <Contact />
 
               <Review />
 

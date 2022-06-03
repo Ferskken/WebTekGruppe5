@@ -10,6 +10,8 @@ import {deleteAuthorizationCookies, getAuthenticatedUser, parseJwtUser} from "./
 import {getCookie} from "./api/cookies";
 import {setReviews} from "./redux/reviewSlice";
 import {setUser} from "./redux/userSlice";
+import Footer from "./footer/footer";
+
 
 export default function App() {
 
@@ -47,6 +49,7 @@ export default function App() {
               <Router>
                   <Navbar/>
                   <MainSection/>
+                  <Footer />
               </Router>
   )
 }
