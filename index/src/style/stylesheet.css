@@ -994,7 +994,7 @@ hr{
     height: 190px;
     width: 190px;
     margin-right: auto;
-    margin-left: 35px;
+    margin-left: 50px;
     padding: 20px;
 }
 
@@ -1007,4 +1007,17 @@ hr{
 .companyDescription {
     margin-bottom: 35px;
     text-align: center;
+}
+
+.socialMediaBox {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.socialiconsPic {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
