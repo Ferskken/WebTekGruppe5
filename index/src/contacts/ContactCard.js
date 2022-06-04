@@ -2,7 +2,6 @@ import React from "react";
 
 export default function ContactCard(props) {
     return(
-        <div>
             <article className={"contact"}>
                 <div className={"contactPicBox"}>
                     <img src={require("../pictures/contact" + props.id + ".jpg")} className="contactPic"  alt={"contactPicture"}/>
@@ -20,6 +19,5 @@ export default function ContactCard(props) {
                 </div>
 
             </article>
-        </div>
     )
 }
