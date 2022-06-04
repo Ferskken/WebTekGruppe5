@@ -3,8 +3,9 @@ import "../style/stylesheet.css";
 import Review from "../reviews/Review";
 import CoreValues from "../coreValues/coreValues";
 import ProductReview from "../reviews/ProductReview";
-import Contact from "../contacts/contact";
+import ContactCard from "../contacts/ContactCard";
 import Footer from "../footer/Footer";
+import ContactSection from "../contacts/ContactSection";
 
 
 export default class LandingPage extends React.Component {
@@ -73,7 +74,7 @@ export default class LandingPage extends React.Component {
 
           </div>
 
-              <Contact />
+              <ContactSection/>
 
               <Review />
 

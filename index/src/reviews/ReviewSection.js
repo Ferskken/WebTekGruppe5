@@ -46,7 +46,9 @@ export default function ReviewSection(props) {
 
     const reviewElements = reviews.map(review => {
         if(review.productId === props.productId){
-            return  <ProductReview review={review} deleteReviewByID={deleteReviewById} key={review.id}/>
+            return  <ProductReview review={review}
+                                   deleteReviewByID={deleteReviewById}
+                                   key={review.id}/>
         }}
     )
 
