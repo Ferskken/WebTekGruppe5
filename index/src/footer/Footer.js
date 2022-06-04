@@ -25,6 +25,10 @@ export default function Footer() {
             </div>
         </div>
 
+        <div className="socialMediaBox">
+            <img src={require("../pictures/socialmediaicons.png")} className="socialiconsPic" alt={"socialMediaIconsPicture"}/>
+        </div>
+
 
         </section>
 
