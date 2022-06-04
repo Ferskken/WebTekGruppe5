@@ -6,7 +6,7 @@ import {FAKE_PRODUCTS} from "./FakeData";
 import {useDispatch, useSelector} from "react-redux";
 import {setProducts} from "./redux/productSlice";
 import {sendApiRequest} from "./api/request";
-import {deleteAuthorizationCookies, getAuthenticatedUser, parseJwtUser} from "./api/authentication";
+import {deleteAuthorizationCookies, getAuthenticatedUser, isAdmin, parseJwtUser} from "./api/authentication";
 import {getCookie} from "./api/cookies";
 import {setReviews} from "./redux/reviewSlice";
 import {setUser} from "./redux/userSlice";
