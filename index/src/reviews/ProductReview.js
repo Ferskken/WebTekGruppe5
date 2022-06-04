@@ -4,16 +4,16 @@ import trashCan from "../pictures/trashcan.png"
 
 export default function ProductReview(props) {
 
+
     return (
 
         <>
-
                 <div className="prodCommentBox">
 
                     <div className="prodCommentText">
                         <div className={"prodCommentTitle"}>
                             <span className="text1">{props.review.reviewText}</span>
-                            <img className={"trashcan--logo"} src={trashCan} onClick={props.deleteReview}/>
+                            <img className={"trashcan--logo"} src={trashCan} onClick={() => props.deleteReviewByID(props.review.id)}/>
                         </div>
                         <div className="commentInfo">
                             <div className="commentProfile">

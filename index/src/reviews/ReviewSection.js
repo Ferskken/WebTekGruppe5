@@ -24,7 +24,6 @@ export default function ReviewSection(props) {
 
     useEffect(() => {
         loadReviews()
-        console.log(reviews)
     },[])
 
     function loadNumberOfReviews() {
@@ -47,7 +46,7 @@ export default function ReviewSection(props) {
 
     const reviewElements = reviews.map(review => {
         if(review.productId === props.productId){
-            return  <ProductReview review={review} key={review.id}/>
+            return  <ProductReview review={review} deleteReviewByID={deleteReviewById} key={review.id}/>
         }}
     )
 
@@ -66,10 +65,14 @@ export default function ReviewSection(props) {
             "reviewText": reviewFormData.reviewText,
             "rating": reviewFormData.rating
         };
-        sendApiRequest("POST", "/api/addReview", onSubmitReviewSuccess, submitReviewData, errorMessage => setError(errorMessage))
+        sendApiRequest("POST", "/api/review/addReview", reloadReviewSection, submitReviewData, errorMessage => setError(errorMessage))
     }
 
-    function onSubmitReviewSuccess() {
+    function deleteReviewById(reviewId) {
+        sendApiRequest("DELETE", "/api/review/delete/" + reviewId, reloadReviewSection, reviewId, errorMessage => setError(errorMessage))
+    }
+
+    function reloadReviewSection() {
         loadReviews()
         loadNumberOfReviews()
     }
