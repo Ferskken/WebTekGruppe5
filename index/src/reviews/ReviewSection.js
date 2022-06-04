@@ -9,6 +9,7 @@ export default function ReviewSection(props) {
 
     const user = useSelector(state => state.userStore.user)
     const reviews = useSelector(state => state.reviewStore.reviews)
+
     const [areReviewsShown, setAreReviewsShown] = useState(false)
     const [isAddReviewSectionShown, setIsAddReviewSectionShown] = useState(false)
     const [error, setError] = useState("");
@@ -18,13 +19,13 @@ export default function ReviewSection(props) {
 
     const [reviewFormData, setReviewFormData] = useState({
         productId: props.productId,
-        reviewUserName: getCookie("current_username"),
+        reviewUserName: user.username,
         reviewText: undefined,
         rating: undefined
     })
 
     function loadNumberOfReviews() {
-        sendApiRequest("GET", "/api/review/" + props.productId, function (numberOfReviews) {setNumberOfReviews(numberOfReviews)} )
+        sendApiRequest("GET", "/api/review/getAll/" + props.productId, function (numberOfReviews) {setNumberOfReviews(numberOfReviews)})
     }
 
     function handleReviewChange(event) {
