@@ -49,17 +49,17 @@ export default class LandingPage extends React.Component {
                           <br/>
 
                           <h4>E-post:</h4>
-                          <p>************@rodekors.org</p>
+                          <p>aalesund@rodekors.org</p>
                           <hr className="destLines"/>
                           <br/>
 
                           <h4>Leder:</h4>
-                          <p>**** ********</p>
+                          <p>Stian Henriksen</p>
                           <hr className="destLines"/>
                           <br/>
 
                           <h4>Nestleder:</h4>
-                          <p>******* *****</p>
+                          <p>Nina Renate Vatnehol</p>
                           <hr className="destLines"/>
                           <br/>
 

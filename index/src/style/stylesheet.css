@@ -546,8 +546,7 @@ div {
 
 .prodRating {
     float: right;
-    padding: 10px;
-    padding-top: 3px;
+    padding: 3px 10px 10px;
 }
 
 #addProdComment {
