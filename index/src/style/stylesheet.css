@@ -558,6 +558,13 @@ div {
     border: 1px solid;
 }
 
+.trashcan--logo {
+
+    margin-right: auto;
+    width: 15px;
+    cursor: pointer;
+}
+
 .reviewTextField {
     float: left;
 }
@@ -932,6 +939,7 @@ hr{
     margin: 10px;
     width: 316px;
     display: inline-block;
+    transition: 0.1s;
 }
 
 .contactPicBox {

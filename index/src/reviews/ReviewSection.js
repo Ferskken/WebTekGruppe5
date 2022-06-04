@@ -1,19 +1,17 @@
 import React, {useEffect, useState} from "react";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import ProductReview from "./ProductReview";
-import {getCookie} from "../api/cookies";
 import {sendApiRequest} from "../api/request";
-import{useNavigate} from "react-router-dom";
+
 
 export default function ReviewSection(props) {
 
     const user = useSelector(state => state.userStore.user)
-    const reviews = useSelector(state => state.reviewStore.reviews)
 
+    const [reviews, setReviews] = useState([])
     const [areReviewsShown, setAreReviewsShown] = useState(false)
     const [isAddReviewSectionShown, setIsAddReviewSectionShown] = useState(false)
     const [error, setError] = useState("");
-    const nav = useNavigate();
 
     const [numberOfReviews, setNumberOfReviews] = useState(loadNumberOfReviews)
 
@@ -24,8 +22,17 @@ export default function ReviewSection(props) {
         rating: undefined
     })
 
+    useEffect(() => {
+        loadReviews()
+        console.log(reviews)
+    },[])
+
     function loadNumberOfReviews() {
         sendApiRequest("GET", "/api/review/getAll/" + props.productId, function (numberOfReviews) {setNumberOfReviews(numberOfReviews)})
+    }
+
+    function loadReviews() {
+        sendApiRequest("GET", "/api/reviews", function(importedReviews) {setReviews(importedReviews)})
     }
 
     function handleReviewChange(event) {
@@ -63,7 +70,8 @@ export default function ReviewSection(props) {
     }
 
     function onSubmitReviewSuccess() {
-        nav("/produkter")
+        loadReviews()
+        loadNumberOfReviews()
     }
 
     return (

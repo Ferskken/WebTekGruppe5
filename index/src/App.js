@@ -23,21 +23,16 @@ export default function App() {
     useEffect(() => {
             restoreUserAtRefreshIfLoggedIn()
             loadRealProducts()
-            loadReviews()
     },[]);
 
    function loadRealProducts() {
-       sendApiRequest("GET", "/api/products", function(products) {dispatch(setProducts(products));})
+       sendApiRequest("GET", "/api/products", function(products)
+                                                            {dispatch(setProducts(products));})
    };
 
     function setFakeProducts() {
         dispatch(setProducts(FAKE_PRODUCTS))
     };
-
-
-    function loadReviews() {
-        sendApiRequest("GET", "/api/reviews", function(reviews) {dispatch(setReviews(reviews));})
-    }
 
     function restoreUserAtRefreshIfLoggedIn() {
         if(getCookie("jwt")) {
