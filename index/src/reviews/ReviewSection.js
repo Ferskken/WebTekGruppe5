@@ -23,15 +23,15 @@ export default function ReviewSection(props) {
     })
 
     useEffect(() => {
-        loadReviews()
+
     },[])
 
     function loadNumberOfReviews() {
-        sendApiRequest("GET", "/api/review/getAll/" + props.productId, function (numberOfReviews) {setNumberOfReviews(numberOfReviews)})
+        sendApiRequest("GET", "/api/review/getAllRelated/" + props.productId, function (numberOfReviews) {setNumberOfReviews(numberOfReviews)})
     }
 
     function loadReviews() {
-        sendApiRequest("GET", "/api/reviews", function(importedReviews) {setReviews(importedReviews)})
+        sendApiRequest("GET", "/api/review/getAll", function(importedReviews) {setReviews(importedReviews)})
     }
 
     function handleReviewChange(event) {

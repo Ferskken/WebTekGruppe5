@@ -26,7 +26,7 @@ export default function App() {
     },[]);
 
    function loadRealProducts() {
-       sendApiRequest("GET", "/api/products", function(products)
+       sendApiRequest("GET", "/api/product/getAll", function(products)
                                                             {dispatch(setProducts(products));})
    };
 

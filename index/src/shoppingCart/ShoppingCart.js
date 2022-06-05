@@ -3,9 +3,11 @@ import {RemoveFromCartButton, DELETE_ALL} from "./RemoveFromCartButton"
 import {setOrder} from "../redux/orderSlice";
 import {sendApiRequest} from "../api/request";
 import {emptyCart} from "../redux/shoppingCartSlice";
+import {useNavigate} from "react-router-dom";
 
 export default function ShoppingCart() {
 
+	const nav = useNavigate();
 	const cart = useSelector(state => state.cartStore.cart)
 	const dispatch = useDispatch();
 
@@ -83,7 +85,7 @@ export default function ShoppingCart() {
             	 	</div>
             	 	<div className="total-amount">{totalPrice} NOK</div>
             	 </div>
-            	 <button className="button">Sjekk ut</button></div>
+            	 <button onClick={() => nav("/")} className="button">Sjekk ut</button></div>
             </div>
         )
 }
