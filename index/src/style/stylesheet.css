@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /**
-    1. General (line: 14)
-    2. Navigation (line: 42)
-        2.1. Hamburger menu (line: 126)
-    3. Content on landing-page (line: 189)
-    4. Products and articles (line: 343)
-    5. Login and Signup form (line: 420)
-    6. Shopping cart (line: 545)
+    1. General (line: 16)
+    2. Navigation (line: 59)
+        2.1. Hamburger menu (line: 152)
+    3. Content on landing-page (line: 247)
+    4. Products and articles (line: 388)
+    5. Login and Signup form (line: 605)
+    6. Shopping cart (line: 730)
+    7. Contact cards (line: 940)
+    8. Footer (line: 991)
 
  */
 
@@ -284,14 +286,15 @@ div {
     padding: 10px 50px 10px;
     border-radius: 4px;
     box-shadow: 5px 5px 3px #aaaaaa;
-
 }
 
 .destLines {
     width: 100%;
     margin: 10px;
-
 }
+
+
+
 
 /** LANDINGPAGE HEARTBEAT PICTURE **/
 
@@ -306,13 +309,15 @@ div {
     width: 100%;
     height: 200px;
     margin-bottom: 50px;
-
 }
 
 .heartbeatBox {
     margin-bottom: 100px;
     width: 100%;
 }
+
+
+
 
 /** Core value section **/
 
@@ -326,14 +331,15 @@ div {
     width: 100%;
     border-radius: 4px;
     box-shadow: 5px 5px 3px #aaaaaa;
-
-
 }
 
 #secondHeader {
     display: flex;
     margin-top: 50px;
 }
+
+
+
 
 /** Review section */
 
@@ -365,11 +371,12 @@ div {
 }
 
 .text1 {
-    font-size: 15px;
+    font-size: 1rem;
     color: #56575b;
 }
+
 .text2 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     margin-left: 10px;
     color: #56575b;
@@ -385,7 +392,6 @@ div {
     flex-direction: column;
     width: 100%;
     border-radius: 20px;
-
 }
 
 .offerRow {
@@ -399,7 +405,6 @@ div {
     height: auto;
     width: 1200px;
     padding: 50px 10px;
-
 }
 
 .offerPics {
@@ -409,7 +414,6 @@ div {
     min-width: 100px;
     transition: transform .3s;
     border-radius: 20px;
-
 }
 
 .articles {
@@ -428,7 +432,6 @@ div {
     border: 1px solid red;
     border-radius: 20px;
     transition: 0.1s;
-
 }
 
 .article_intro:hover {
@@ -488,7 +491,6 @@ div {
     transition: 0.1s;
 }
 
-
 .reviewButtons {
     margin-top: 40px;
 }
@@ -498,7 +500,7 @@ div {
     width: 45%;
     border-radius: 20px;
     padding: 5px;
-    font-size: 20px;
+    font-size: 1.25rem;
     float: left;
     background-color: whitesmoke;
     transition: 0.1s;
@@ -519,7 +521,6 @@ div {
     float: right;
     background-color: whitesmoke;
     transition: 0.1s;
-
 }
 
 #addCourseReviewBtn:hover {
@@ -582,7 +583,7 @@ div {
 #sendCommentBtn {
     margin-top: 15px;
     margin-right: 20px;
-    font-size: 20px;
+    font-size: 1.25rem;
     width: 150px;
     height: 35px;
     float: right;
@@ -597,6 +598,8 @@ div {
     transform: scale(1.05);
     transition: 0.1s;
 }
+
+
 
 
 /** LOGIN / SIGNUP FORM */
@@ -758,7 +761,7 @@ input{
 
 .removeButton{
     background-color: transparent;
-    font-size: 17px;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #E44C4C;
     cursor: pointer;
@@ -813,14 +816,14 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     color: #202020;
     cursor: pointer;
 }
 
 .count{
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 900;
     color: #202020;
 }
@@ -831,7 +834,7 @@ input{
 }
 
 .amount{
-    font-size: 26px;
+    font-size: 1.63rem;
     font-weight: 800;
     color: #202020;
 }
@@ -856,19 +859,19 @@ hr{
 }
 
 .Subtotal{
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #202020;
 }
 
 .items{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     color: #909090;
     line-height: 10px;
 }
 
 .total-amount{
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 900;
     color: #202020;
 }
@@ -884,6 +887,9 @@ hr{
     font-size: 16px;
     color: white;
 }
+
+
+
 
 /* Log in information /logout */
 
@@ -910,7 +916,7 @@ hr{
 .logoutButton {
     padding: 5px;
     position: absolute;
-    font-size: 20px;
+    font-size: 1.25rem;
     width: 120px;
     bottom: 15px;
     left: 40px;
@@ -924,6 +930,10 @@ hr{
     transform: scale(1.05);
     transition: 0.1s;
 }
+
+
+
+
 
 /* ContactCard Personal */
 
@@ -964,7 +974,7 @@ hr{
 }
 
 .contactName {
-    font-size: 25px;
+    font-size: 1.565rem;
     text-align: center;
 }
 
@@ -972,6 +982,9 @@ hr{
     width: 95%;
 
 }
+
+
+
 
 /* Footer */
 
