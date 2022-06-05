@@ -18,8 +18,8 @@ export default function ReviewSection(props) {
     const [reviewFormData, setReviewFormData] = useState({
         productId: props.productId,
         reviewUserName: user.username,
-        reviewText: undefined,
-        rating: undefined
+        reviewText: "",
+        rating: 0
     })
 
     useEffect(() => {
@@ -103,7 +103,7 @@ export default function ReviewSection(props) {
                             name={"rating"}
                             onChange={handleReviewChange}
                             >
-                        <option value="hide">{"Din vurdering"}</option>
+                        <option value="0">{"Din vurdering"}</option>
                         <option value="1">{"1/5"}</option>
                         <option value="2">{"2/5"}</option>
                         <option value="3">{"3/5"}</option>
