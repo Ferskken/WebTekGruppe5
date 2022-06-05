@@ -23,7 +23,7 @@ export default function ReviewSection(props) {
     })
 
     useEffect(() => {
-
+        loadReviews()
     },[])
 
     function loadNumberOfReviews() {
