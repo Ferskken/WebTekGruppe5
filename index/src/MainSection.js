@@ -3,6 +3,7 @@ import ProductSection from "./products/ProductSection";
 import {Route, Routes} from "react-router-dom";
 import ShoppingCart from "./shoppingCart/ShoppingCart";
 import YourPage from "./pages/YourPage";
+import CheckoutPage from "./shoppingCart/CheckoutPage";
 
 
 
@@ -19,6 +20,7 @@ export function MainSection() {
             <Route path="/produkter" element={<ProductSection/>}/>
             <Route path="/dinside" element={<YourPage />}/>
             <Route path="/handlekurv" element={<ShoppingCart/>}/>
+            <Route path="/sjekkut" element={<CheckoutPage/>}/>
         </Routes>
     </main>;
 }

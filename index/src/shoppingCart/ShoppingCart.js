@@ -85,7 +85,9 @@ export default function ShoppingCart() {
             	 	</div>
             	 	<div className="total-amount">{totalPrice} NOK</div>
             	 </div>
-            	 <button onClick={() => nav("/")} className="button">Sjekk ut</button></div>
+            	 <button onClick={() => nav("/sjekkut")} className="button">Sjekk ut</button>
             </div>
-        )
+       </div>
+
+    )
 }
