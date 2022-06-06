@@ -3,7 +3,7 @@ import ProductSection from "./products/ProductSection";
 import {Route, Routes} from "react-router-dom";
 import ShoppingCart from "./shoppingCart/ShoppingCart";
 import YourPage from "./pages/YourPage";
-import CheckoutPage from "./shoppingCart/CheckoutPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 
 

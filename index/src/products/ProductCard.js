@@ -112,8 +112,8 @@ export default function ProductCard(props) {
                                     onChange={handleCartItemChange}
                             >
                                 <option value="hide">{"Språk"}</option>
-                                <option value="norwegian">{"Norsk"}</option>
-                                <option value="english">{"English"}</option>
+                                <option value="Norsk">{"Norsk"}</option>
+                                <option value="English">{"English"}</option>
                             </select>
                             <br />
                             <br />

@@ -49,7 +49,6 @@ export default function LoginOrSignup() {
                 "email": signUpFormData.email,
                 "password": signUpFormData.password
             };
-            console.log(signUpFormData)
             sendApiRequest("POST", "/api/signup", onSignupSuccess, signUpData, errorMessage => setError(errorMessage))
         }
         else {

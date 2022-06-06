@@ -54,18 +54,9 @@ export default function ShoppingCart() {
 		cartItems.push(itemRow);
 	}
 
-	function createOrder() {
-		dispatch(setOrder(cartItems))
-		sendApiRequest("POST", "/api/order", onCreateOrderSuccess, cartItems, )
-		dispatch(emptyCart)
-	}
-
-	function onCreateOrderSuccess() {
-		console.log()
-	}
-
-	function displayErr() {
-		console.log("creating order failed.")
+	function checkoutOrder() {
+		nav("/sjekkut")
+		dispatch(emptyCart())
 	}
 
 	return (
@@ -85,7 +76,7 @@ export default function ShoppingCart() {
             	 	</div>
             	 	<div className="total-amount">{totalPrice} NOK</div>
             	 </div>
-            	 <button onClick={() => nav("/sjekkut")} className="button">Sjekk ut</button>
+            	 <button onClick={checkoutOrder} className="button">Sjekk ut</button>
             </div>
        </div>
 
