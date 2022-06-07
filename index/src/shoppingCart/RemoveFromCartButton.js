@@ -27,5 +27,8 @@ export function RemoveFromCartButton(props) {
         <button className="removeButton" onClick={actionFunction}>{props.buttonText}</button>
     )
 }
-//Used to determine which button was clicked in shopping cart
+
+/**
+Used to determine which button was clicked in shopping cart
+**/
 export const DELETE_ALL = "all";

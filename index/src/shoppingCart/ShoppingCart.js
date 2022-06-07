@@ -54,6 +54,9 @@ export default function ShoppingCart() {
 		cartItems.push(itemRow);
 	}
 
+	/*
+	    Displays checkout page and clears shopping cart. When client press the check out button
+	*/
 	function checkoutOrder() {
 		nav("/sjekkut")
 		dispatch(emptyCart())

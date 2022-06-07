@@ -4,7 +4,7 @@ export default function Footer() {
     return(
 
   <>
-        <section className={"footerBox"}>
+        <footer className={"footerBox"}>
 
         <p className={"footerHeader"}>Noen av våre støttespillere! </p>
 
@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
 
 
-        </section>
+        </footer>
 
   </>
 

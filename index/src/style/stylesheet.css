@@ -64,6 +64,10 @@ div {
     width: 90%;
 }
 
+/**
+Navbar has position fixed to make it stay at the top of the page so that client always can maneuver to other pages
+**/
+
 .navbar {
     background-image: url("../pictures/heartbeat-removebg-preview.png");
     background-repeat: repeat;
@@ -74,9 +78,6 @@ div {
     width: 100%;
     background-color: white;
     z-index: 1;
-}
-
-.heartbeat {
 }
 
 .nav-container {
@@ -165,6 +166,12 @@ div {
     transition: transform 0.4s ease-in-out;
 }
 
+/**
+Hambruger menu originally displays as 3 span lines,
+when checkbox is clicked the middle line fades out while the two other
+lines rotate 45 degrees in opposite directions.
+**/
+
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
     transform: translateX(0);
 }
@@ -201,6 +208,8 @@ div {
     font-size: 1.5rem;
     font-weight: 500;
 }
+
+/** Animation creating lines on hover effect for items inside menu **/
 
 .hover-underline-animation {
     display: inline-block;
@@ -245,6 +254,11 @@ div {
 
 
 /** CONTENT FOR LANDINGPAGE **/
+
+/**
+The main element "center" acts as the main display for page-information,
+have sat max width and margin auto to make it operate as a holy grail layout.
+**/
 
 .center {
     position: center;
@@ -714,6 +728,11 @@ input{
     transform: scale(.6);
 }
 
+/**
+When client press login/signup the form transforms in y/vertical direction 500 pixels
+causing the form to display two separate forms on button(checked).
+**/
+
 #chk:checked ~ .login{
     transform: translateY(-500px);
 }
@@ -950,9 +969,6 @@ hr{
     width: 316px;
     display: inline-block;
     transition: 0.1s;
-}
-
-.contactPicBox {
 }
 
 .contactPic {

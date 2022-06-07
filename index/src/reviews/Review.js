@@ -1,8 +1,11 @@
 import React from "react";
 
+/**
+    Component on main page containing a static display of provided page reviews.
+**/
 export default function Review() {
     return(
-                      <div className={"reviewBox"}>
+                      <section className={"reviewBox"}>
 
                         <p className="paragraphTitles">Les kommentarer fra noen av våre medlemmer og tidligere kursdeltagere.</p>
 
@@ -65,6 +68,6 @@ export default function Review() {
                             </div>
 
 
-                      </div>
+                      </section>
     )
 }

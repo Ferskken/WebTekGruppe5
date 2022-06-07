@@ -25,15 +25,19 @@ export default function App() {
             loadRealProducts()
     },[]);
 
-   function loadRealProducts() {
+
+    /**
+     * sends request to backend endpoint where product recourses are listed and displays the given data.
+     */
+    function loadRealProducts() {
        sendApiRequest("GET", "/api/product/getAll", function(products)
                                                             {dispatch(setProducts(products));})
    };
 
-    function setFakeProducts() {
-        dispatch(setProducts(FAKE_PRODUCTS))
-    };
 
+    /**
+     * Remember the local cookie in browser containing login information on page refresh.
+     */
     function restoreUserAtRefreshIfLoggedIn() {
         if(getCookie("jwt")) {
             dispatch(setUser(parseJwtUser(getCookie("jwt"))))
