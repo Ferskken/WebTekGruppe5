@@ -6,7 +6,6 @@ export default class shoppingCartPage extends React.Component {
     render() {
         return(
             <>
-                <Navbar />
                 <ShoppingCart />
             </>
         )

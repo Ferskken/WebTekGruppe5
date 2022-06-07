@@ -1,9 +1,9 @@
 import LandingPage from "./pages/LandingPage";
 import ProductSection from "./products/ProductSection";
 import {Route, Routes} from "react-router-dom";
-import ShoppingCart from "./shoppingCart/ShoppingCart";
 import YourPage from "./pages/YourPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import ShoppingCartPage from "./pages/ShoppingCartPage"
 
 
 
@@ -12,14 +12,13 @@ import CheckoutPage from "./pages/CheckoutPage";
  * @return {JSX.Element}
  * @constructor
  */
-
 export function MainSection() {
     return <main>
         <Routes>
             <Route path="/" element={<LandingPage/>}/>
             <Route path="/produkter" element={<ProductSection/>}/>
             <Route path="/dinside" element={<YourPage />}/>
-            <Route path="/handlekurv" element={<ShoppingCart/>}/>
+            <Route path="/handlekurv" element={<ShoppingCartPage/>}/>
             <Route path="/sjekkut" element={<CheckoutPage/>}/>
         </Routes>
     </main>;
