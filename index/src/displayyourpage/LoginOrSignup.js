@@ -5,26 +5,47 @@ import {useDispatch, useSelector} from "react-redux";
 import {sendAuthenticationRequest} from "../api/authentication";
 import {setUser} from "../redux/userSlice";
 
-
+/**
+ * Component for displaying a login or signup form,
+ * which can authenticate existing users and sign up new users.
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function LoginOrSignup() {
 
-    const user = useSelector(state => state.userStore.user)
     const nav = useNavigate();
     const dispatch = useDispatch();
 
+    /**
+     * State for remembering the user input in the signup form.
+     */
     const [signUpFormData, setSignUpFormData] = useState({
         username: "",
         email: "",
         password: "",
         confirmPassword: ""
     })
+
+    /**
+     * State for remembering the user input in the login form.
+     */
     const [loginFormData, setLoginFormData] = useState({
         username:"",
         password:""
     })
-    const [message, setMessage] = useState("");
+
+    /**
+     * State for receiving error messages from API calls.
+     */
     const [error, setError] = useState("");
 
+    /**
+     * Tracks the signup form.
+     * When a user types in the signup form, the signup form state is updated
+     * by spreading in the previous state and adding the newly typed letter
+     * to the new state.
+     * @param event when the user types.
+     */
     function handleChangeSignUp(event) {
         const {name, value} = event.target
         setSignUpFormData(prevFormData => ({
@@ -33,6 +54,13 @@ export default function LoginOrSignup() {
         }))
     }
 
+    /**
+     * Tracks the login form.
+     * When a user types in the login form, the login form state is updated
+     * by spreading in the previous state and adding the newly typed letter
+     * to the new state.
+     * @param event when the user types.
+     */
     function handleChangeLogin(event) {
         const {name, value} = event.target
         setLoginFormData(prevFormData => ({
@@ -41,6 +69,13 @@ export default function LoginOrSignup() {
         }))
     }
 
+    /**
+     * Sends a request to the api to signup a new user.
+     * It uses the signUpFormData state, collects the values and uses it
+     * in an api request.
+     *
+     * @param event to prevent the values from resetting
+     */
     function handleSignUpSubmit(event) {
         event.preventDefault();
         if(signUpFormData.password === signUpFormData.confirmPassword) {
@@ -57,13 +92,22 @@ export default function LoginOrSignup() {
         }
      }
 
-     function handleLoginSubmit(event) {
+    /**
+     * 
+     *
+     * @param event
+     */
+    function handleLoginSubmit(event) {
         event.preventDefault()
          sendAuthenticationRequest(loginFormData.username, loginFormData.password,
              onLoginSuccess,
                  errorMessage => setError(errorMessage))
      }
 
+    /**
+     *
+     * @param userData
+     */
      function onLoginSuccess(userData) {
         dispatch(setUser(userData))
      }

@@ -1,6 +1,11 @@
 import React from "react"
 import ContactCard from "./ContactCard";
 
+/**
+ * A collection of contact cards to be displayed on the frontpage
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function ContactSection() {
 
     return(

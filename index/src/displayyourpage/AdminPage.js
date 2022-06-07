@@ -1,7 +1,12 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 
-
+/**
+ * A component representing an Admin's page
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function AdminPage(props) {
 
     const user = useSelector(state => state.userStore.user)

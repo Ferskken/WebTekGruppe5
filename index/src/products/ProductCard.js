@@ -41,7 +41,7 @@ export default function ProductCard(props) {
     //Displays the correct price depending on the group size
     function handlePrice() {
 
-        if(cartItemData.groupSize === "5" && cartItemData.title === "Two day course") {
+        if(cartItemData.groupSize === "5" && cartItemData.title === "To dagers kurs") {
             setCartItemData(prevCartItemData => {
                 return {
                     ...prevCartItemData,
@@ -50,7 +50,7 @@ export default function ProductCard(props) {
             })
         }
 
-        if(cartItemData.groupSize === "1" && cartItemData.title === "Two day course") {
+        if(cartItemData.groupSize === "1" && cartItemData.title === "To dagers kurs") {
             setCartItemData(prevCartItemData => {
                 return {
                     ...prevCartItemData,
@@ -59,7 +59,7 @@ export default function ProductCard(props) {
             })
         }
 
-        if(cartItemData.groupSize === "5" && cartItemData.title === "One day course") {
+        if(cartItemData.groupSize === "5" && cartItemData.title === "Dags kurs") {
             setCartItemData(prevCartItemData => {
                 return {
                     ...prevCartItemData,
@@ -68,7 +68,7 @@ export default function ProductCard(props) {
             })
         }
 
-        if(cartItemData.groupSize === "1" && cartItemData.title === "One day course") {
+        if(cartItemData.groupSize === "1" && cartItemData.title === "Dags kurs") {
             setCartItemData(prevCartItemData => {
                 return {
                     ...prevCartItemData,

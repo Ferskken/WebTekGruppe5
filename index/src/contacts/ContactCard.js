@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ * A contact card on the frontpage, representing a person working for Røde kors.
+ * @param props from the ContactSection component.
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function ContactCard(props) {
     return(
             <article className={"contact"}>

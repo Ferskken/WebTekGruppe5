@@ -1,8 +1,11 @@
 import React from "react";
 
+/**
+ * Static component displaying the core values of Røde kors.
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function CoreValues() {
-
-
     return (
 
             <div className="coreValues">
