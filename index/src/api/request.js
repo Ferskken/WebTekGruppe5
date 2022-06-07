@@ -4,9 +4,6 @@ import {getCookie} from "./cookies";
 // Note: all environment variables must start with REACT_, otherwise React will not handle them!
 const API_BASE_URL = process.env.REACT_APP_BASE_URL;
 
-// Note - this is an abstraction layer for HTTP requests. You can implement this function in any way
-// you want - with Axios, Fetch, ...
-
 /**
  * Send a REST-API request to the backend
  * @param method The method to use: GET, POST, PUT, DELETE
