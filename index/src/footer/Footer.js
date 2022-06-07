@@ -1,5 +1,10 @@
 import React from "react";
 
+/**
+ * Represents a footer in a page
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Footer() {
     return(
 

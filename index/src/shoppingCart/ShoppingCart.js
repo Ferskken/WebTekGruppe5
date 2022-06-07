@@ -1,10 +1,14 @@
 import {useDispatch, useSelector} from "react-redux";
 import {RemoveFromCartButton, DELETE_ALL} from "./RemoveFromCartButton"
-import {setOrder} from "../redux/orderSlice";
-import {sendApiRequest} from "../api/request";
 import {emptyCart} from "../redux/shoppingCartSlice";
 import {useNavigate} from "react-router-dom";
 
+/**
+ * Represents a shopping cart. Products can be added to the shoppingcart,
+ * to then be checked out.
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function ShoppingCart() {
 
 	const nav = useNavigate();

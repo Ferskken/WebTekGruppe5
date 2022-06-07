@@ -2,13 +2,11 @@ import React from 'react';
 import "../style/stylesheet.css";
 import Review from "../reviews/Review";
 import CoreValues from "../coreValues/coreValues";
-import ProductReview from "../reviews/ProductReview";
-import ContactCard from "../contacts/ContactCard";
 import Footer from "../footer/Footer";
 import ContactSection from "../contacts/ContactSection";
 
 /**
- * Represents the landing page of
+ * Represents the landing page for the site
  */
 export default class LandingPage extends React.Component {
     render() {

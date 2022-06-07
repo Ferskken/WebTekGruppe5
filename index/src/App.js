@@ -2,34 +2,28 @@ import {useEffect} from "react";
 import Navbar from "./navigation/Navbar";
 import {MainSection} from "./MainSection";
 import {BrowserRouter as Router} from "react-router-dom";
-import {FAKE_PRODUCTS} from "./FakeData";
 import {useDispatch, useSelector} from "react-redux";
 import {setProducts} from "./redux/productSlice";
 import {sendApiRequest} from "./api/request";
 import {deleteAuthorizationCookies, getAuthenticatedUser, isAdmin, parseJwtUser} from "./api/authentication";
 import {getCookie} from "./api/cookies";
-import {setReviews} from "./redux/reviewSlice";
 import {setUser} from "./redux/userSlice";
-import Footer from "./footer/Footer";
 
 
 export default function App() {
-
-    const user = useSelector(state => state.userStore.user)
-    const reviews = useSelector(state => state.reviewStore.reviews)
 
     const dispatch = useDispatch();
 
     useEffect(() => {
             restoreUserAtRefreshIfLoggedIn()
-            loadRealProducts()
+            loadProducts()
     },[]);
 
 
     /**
      * sends request to backend endpoint where product recourses are listed and displays the given data.
      */
-    function loadRealProducts() {
+    function loadProducts() {
        sendApiRequest("GET", "/api/product/getAll", function(products)
                                                             {dispatch(setProducts(products));})
    };

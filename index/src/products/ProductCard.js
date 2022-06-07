@@ -2,6 +2,12 @@ import React, {useState} from "react";
 import AddToCartButton from "../shoppingCart/AddToCartButton";
 import ReviewSection from "../reviews/ReviewSection";
 
+/**
+ * Represents a product card
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function ProductCard(props) {
 
    /**

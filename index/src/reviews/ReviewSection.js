@@ -1,15 +1,26 @@
 import React, {useEffect, useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import ProductReview from "./ProductReview";
 import {sendApiRequest} from "../api/request";
 
-
+/**
+ * Represents the reviewsection.
+ * The user can choose to show the amount of reviews, and the section
+ * to add a review(if the user is logged in)
+ *
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function ReviewSection(props) {
 
     const user = useSelector(state => state.userStore.user)
 
+    //State for all the reviews
     const [reviews, setReviews] = useState([])
+    //State to show the existing reviews section
     const [areReviewsShown, setAreReviewsShown] = useState(false)
+    //State to show the add review section
     const [isAddReviewSectionShown, setIsAddReviewSectionShown] = useState(false)
     const [error, setError] = useState("");
 
@@ -22,6 +33,9 @@ export default function ReviewSection(props) {
         rating: 0
     })
 
+    /**
+     * Reload the reviews when a state changes
+     */
     useEffect(() => {
         loadReviews()
     },[])
@@ -51,6 +65,10 @@ export default function ReviewSection(props) {
         })
     }
 
+    /**
+     * Creates a review component for each existing review
+     * @type {unknown[]}
+     */
     const reviewElements = reviews.map(review => {
         if(review.productId === props.productId){
             return  <ProductReview review={review}
@@ -59,10 +77,12 @@ export default function ReviewSection(props) {
         }}
     )
 
+    //Switches the state to hide/show reviews
     function toggleShowReviews() {
         return setAreReviewsShown(!areReviewsShown)
     }
 
+    //Switches the state to show/hide the addReview section
     function toggleShowAddReviewSection() {
         return setIsAddReviewSectionShown(!isAddReviewSectionShown)
     }
@@ -82,7 +102,7 @@ export default function ReviewSection(props) {
     }
 
     /**
-        Deletes review element by id in database (crud functionality)
+        Deletes review element by id in database
     */
     function deleteReviewById(reviewId) {
         sendApiRequest("DELETE", "/api/review/delete/" + reviewId, reloadReviewSection, reviewId, errorMessage => setError(errorMessage))
