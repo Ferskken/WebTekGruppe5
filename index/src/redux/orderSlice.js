@@ -1,5 +1,8 @@
 import {createSlice} from "@reduxjs/toolkit";
 
+/**
+    Global state for order.
+**/
 export const orderSlice = createSlice({
     name: "orders",
     initialState: {

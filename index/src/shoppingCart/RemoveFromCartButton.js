@@ -30,5 +30,5 @@ export function RemoveFromCartButton(props) {
 
 /**
 Used to determine which button was clicked in shopping cart
-**/
+*/
 export const DELETE_ALL = "all";

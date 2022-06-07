@@ -4,7 +4,9 @@ import ReviewSection from "../reviews/ReviewSection";
 
 export default function ProductCard(props) {
 
-    // State to store the current data of the product
+   /**
+       State to store the current data of the product
+   */
     const [cartItemData, setCartItemData] = useState({
         id: props.product.id,
         title: props.product.title,
@@ -17,7 +19,9 @@ export default function ProductCard(props) {
         date: undefined
     })
 
-    // Only display add to cart button if all selects are selected
+    /**
+        Only display add to cart button if all selects are selected
+    */
     function displayAddButtonForCorrectValues(){
          if(cartItemData.timeOfDay !== undefined &&
             cartItemData.language !== undefined &&
@@ -27,7 +31,9 @@ export default function ProductCard(props) {
         }
     }
 
-    //Updates the cart when the form changes
+    /**
+        Updates the cart when the form changes
+    */
     function handleCartItemChange(event) {
         const {name, value} = event.target
         setCartItemData(prevCartItemData => {
@@ -38,7 +44,9 @@ export default function ProductCard(props) {
         })
     }
 
-    //Displays the correct price depending on the group size
+    /**
+    Displays the correct price depending on the group size
+    */
     function handlePrice() {
 
         if(cartItemData.groupSize === "5" && cartItemData.title === "To dagers kurs") {

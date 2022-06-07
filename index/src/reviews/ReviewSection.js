@@ -28,21 +28,19 @@ export default function ReviewSection(props) {
 
     /**
         requests the amount of reviews for individual products.
-    **/
+    */
     function loadNumberOfReviews() {
         sendApiRequest("GET", "/api/review/getAllRelated/" + props.productId, function (numberOfReviews) {setNumberOfReviews(numberOfReviews)})
     }
 
     /**
         display all reviews for individual products
-    **/
+    */
     function loadReviews() {
         sendApiRequest("GET", "/api/review/getAll", function(importedReviews) {setReviews(importedReviews)})
     }
 
-    /**
 
-    **/
     function handleReviewChange(event) {
         const {name, value} = event.target
         setReviewFormData(prevReviewFormData => {
@@ -69,6 +67,10 @@ export default function ReviewSection(props) {
         return setIsAddReviewSectionShown(!isAddReviewSectionShown)
     }
 
+    /**
+        Retrieves data from "addProdComment" and assign data from inputs to create a new review for the
+        specific product id (submitReviewData).
+    */
     function handleSubmitReview() {
         const submitReviewData = {
             "productId": reviewFormData.productId,
@@ -79,6 +81,9 @@ export default function ReviewSection(props) {
         sendApiRequest("POST", "/api/review/addReview", reloadReviewSection, submitReviewData, errorMessage => setError(errorMessage))
     }
 
+    /**
+        Deletes review element by id in database (crud functionality)
+    */
     function deleteReviewById(reviewId) {
         sendApiRequest("DELETE", "/api/review/delete/" + reviewId, reloadReviewSection, reviewId, errorMessage => setError(errorMessage))
     }
@@ -89,7 +94,7 @@ export default function ReviewSection(props) {
     }
 
     /**
-        When logged in user/admin press "add comment" display div "appProdComment"
+        logged in user/admin press "add comment" display div "appProdComment"
         containing input element(comment) and select element(rating 1-5), onclick send comment
         button triggers handleSubmitReview() function.
     **/

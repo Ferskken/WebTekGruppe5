@@ -1,5 +1,8 @@
 import {createSlice} from "@reduxjs/toolkit";
 
+/**
+    Global state for product.
+**/
 export const productSlice = createSlice({
     name: "products",
     initialState: {

@@ -7,7 +7,9 @@ export default function ProductSection() {
 
     const products = useSelector(state => state.productStore.products)
 
-    // Creates a product card for each existing product
+    /**
+        Creates a product card for each existing product
+    */
     const productElements = products.map(product => (
             <ProductCard
                 product={product}

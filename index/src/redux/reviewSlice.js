@@ -1,5 +1,8 @@
 import {createSlice} from "@reduxjs/toolkit";
 
+/**
+    Global state for review.
+**/
 export const reviewSlice = createSlice({
     name: "reviews",
     initialState: {

@@ -19,7 +19,7 @@ export default class LandingPage extends React.Component {
               <div id="secondHeader">
                   <img src={require("../pictures/rk2.png")} id="landingPagePic"  alt={"rodeKors2"}/>
               </div>
-              <div className="infoBox">
+              <section className="infoBox">
                   <h4>Velkommen til Aalesund Røde Kors!</h4>
                   <br/>
                   <p>
@@ -74,7 +74,7 @@ export default class LandingPage extends React.Component {
 
                  <CoreValues />
 
-          </div>
+          </section>
 
               <ContactSection/>
 

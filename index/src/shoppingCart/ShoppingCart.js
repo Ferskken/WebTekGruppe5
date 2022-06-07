@@ -50,11 +50,13 @@ export default function ShoppingCart() {
 				<hr/>
 			</div>
 
-		//Adds the item to the redux store
+		/**
+	        Adds the item to the redux store
+	    */
 		cartItems.push(itemRow);
 	}
 
-	/*
+	/**
 	    Displays checkout page and clears shopping cart. When client press the check out button
 	*/
 	function checkoutOrder() {

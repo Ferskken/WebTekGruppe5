@@ -8,7 +8,7 @@ import React from "react";
 export default function CoreValues() {
     return (
 
-            <div className="coreValues">
+            <section className="coreValues">
 
                           <div id="coreValuesDrop" className="coreValuesContent">
                               <p className="paragraphTitles">Kjerneverdier.</p>
@@ -44,7 +44,7 @@ export default function CoreValues() {
 
                           </div>
 
-            </div>
+            </section>
     )
 }
 
