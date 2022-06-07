@@ -26,14 +26,23 @@ export default function ReviewSection(props) {
         loadReviews()
     },[])
 
+    /**
+        requests the amount of reviews for individual products.
+    **/
     function loadNumberOfReviews() {
         sendApiRequest("GET", "/api/review/getAllRelated/" + props.productId, function (numberOfReviews) {setNumberOfReviews(numberOfReviews)})
     }
 
+    /**
+        display all reviews for individual products
+    **/
     function loadReviews() {
         sendApiRequest("GET", "/api/review/getAll", function(importedReviews) {setReviews(importedReviews)})
     }
 
+    /**
+
+    **/
     function handleReviewChange(event) {
         const {name, value} = event.target
         setReviewFormData(prevReviewFormData => {
@@ -79,6 +88,11 @@ export default function ReviewSection(props) {
         loadNumberOfReviews()
     }
 
+    /** 
+        When logged in user/admin press "add comment" display div "appProdComment"
+        containing input element(comment) and select element(rating 1-5), onclick send comment
+        button triggers handleSubmitReview() function.
+    **/
     return (
         <>
             <div className="reviewButtons">
