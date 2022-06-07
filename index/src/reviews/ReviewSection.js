@@ -88,7 +88,7 @@ export default function ReviewSection(props) {
         loadNumberOfReviews()
     }
 
-    /** 
+    /**
         When logged in user/admin press "add comment" display div "appProdComment"
         containing input element(comment) and select element(rating 1-5), onclick send comment
         button triggers handleSubmitReview() function.
