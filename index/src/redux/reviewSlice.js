@@ -9,11 +9,8 @@ export const reviewSlice = createSlice({
         setReviews: function (state, action) {
             state.reviews = action.payload;
         },
-        addReview: function (state, action) {
-            state.reviews.push(action.payload)
-        }
     }
 });
 
-export const{setReviews, addReview} = reviewSlice.actions;
+export const{setReviews} = reviewSlice.actions;
 export default reviewSlice.reducer;

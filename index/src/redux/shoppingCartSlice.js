@@ -19,7 +19,7 @@ export const cartSlice = createSlice({
                 // No item of the same type already in the cart
                 state.cart[propertyName] = {product: product, count: 1};
             } else {
-                // Item already in the cart, increase count
+                // Item already in the cart, do nothing
             }
         },
         /**

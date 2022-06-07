@@ -7,7 +7,9 @@ import ContactCard from "../contacts/ContactCard";
 import Footer from "../footer/Footer";
 import ContactSection from "../contacts/ContactSection";
 
-
+/**
+ * Represents the landing page of
+ */
 export default class LandingPage extends React.Component {
     render() {
         return (

@@ -6,7 +6,6 @@ import ProductReview from "../reviews/ProductReview";
 export default function ProductSection() {
 
     const products = useSelector(state => state.productStore.products)
-    const reviews = useSelector(state => state.reviewStore.reviews)
 
     // Creates a product card for each existing product
     const productElements = products.map(product => (
@@ -15,7 +14,6 @@ export default function ProductSection() {
                 key={product.id}
             />
         )
-
     )
 
     return (
