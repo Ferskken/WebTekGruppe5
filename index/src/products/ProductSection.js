@@ -2,6 +2,7 @@ import ProductCard from "./ProductCard";
 import {useSelector} from "react-redux";
 import ProductReview from "../reviews/ProductReview";
 
+
 export default function ProductSection() {
 
     const products = useSelector(state => state.productStore.products)
@@ -16,14 +17,6 @@ export default function ProductSection() {
         )
 
     )
-
-    // const reviewElements = reviews.map(review => (
-    //     <ProductReview
-    //         review={review}
-    //
-    //         key={review.id}
-    //     />
-    // ))
 
     return (
         <div className="offerRow">
