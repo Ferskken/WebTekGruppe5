@@ -93,7 +93,9 @@ export default function LoginOrSignup() {
      }
 
     /**
-     * 
+     * Sends a request to the api to authenticate an existing user.
+     * It uses the loginFormData state, collects the values and uses it
+     * in an api request.
      *
      * @param event
      */
@@ -105,7 +107,8 @@ export default function LoginOrSignup() {
      }
 
     /**
-     *
+     * If login is successfull, set the redux user state to the user
+     * which has been authenticated.
      * @param userData
      */
      function onLoginSuccess(userData) {
@@ -113,14 +116,13 @@ export default function LoginOrSignup() {
      }
 
     /**
-     * This function is called when signup was successful
+     * If signup is successfull, navigate to the home page.
+     * This function could/should be improved to automatically authenticate and log in
+     * the newly signed up user.
      */
     function onSignupSuccess() {
         nav("/");
     }
-
-    /** **/
-
 
     return(
 

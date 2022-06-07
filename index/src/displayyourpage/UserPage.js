@@ -1,7 +1,12 @@
 import React from "react";
 import {useSelector} from "react-redux";
 
-
+/**
+ * Component representing a user's page.
+ * @param props from the DisplayYourPage parent component
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function UserPage(props) {
 
     const user = useSelector(state => state.userStore.user)

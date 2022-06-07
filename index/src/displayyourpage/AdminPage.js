@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 /**
  * A component representing an Admin's page
- * @param props
+ * @param props from the DisplayYourPage parent component
  * @returns {JSX.Element}
  * @constructor
  */

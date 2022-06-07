@@ -2,6 +2,11 @@ import ProductCard from "./ProductCard";
 import {useSelector} from "react-redux";
 import ProductReview from "../reviews/ProductReview";
 
+/**
+ *
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function ProductSection() {
 
     const products = useSelector(state => state.productStore.products)

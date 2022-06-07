@@ -16,7 +16,6 @@ export default function Navbar() {
 
 
     const cart = useSelector(state => state.cartStore.cart)
-    const user = useSelector(state => state.userStore.user)
     const nav = useNavigate();
     //Gets the total amount of products in the cart
     function getItemCount () {
@@ -38,7 +37,11 @@ export default function Navbar() {
         }
     }
 
-    function displayUser() {
+    /**
+     * Shows the User's name in the navbar if the user is logged in.
+     * @returns {string}
+     */
+    function displayUserName() {
         if(getAuthenticatedUser()) {
             return `Hei! ${getCookie("current_username")}`
         } else {
@@ -64,7 +67,7 @@ export default function Navbar() {
                         <li className={"hover-underline-animation"}><ActiveLink to="/">Hjem</ActiveLink></li>
                         <li className={"hover-underline-animation"}><ActiveLink to="/produkter">Produkter</ActiveLink></li>
                         <li className={"hover-underline-animation"}><ActiveLink to="/handlekurv">{displayCart()}</ActiveLink></li>
-                        <li className={"hover-underline-animation"}><ActiveLink to="/dinside">{displayUser()}</ActiveLink></li>
+                        <li className={"hover-underline-animation"}><ActiveLink to="/dinside">{displayUserName()}</ActiveLink></li>
                     </ul>
              </div>
             </div>
